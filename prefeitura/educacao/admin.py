@@ -1,0 +1,9 @@
+from django.contrib import admin
+from .models import Autorizacao_de_Estagio_Supervisionado, Autorizacao_para_Pesquisa_CREI_Escola, Furto_Extravio_ou_Perda_de_Equipamentos, Solicitacao_de_Espaco_Fisico_Escola_CREI, Solicitacao_Diversa
+
+# Register your models here.
+admin.site.register(Autorizacao_de_Estagio_Supervisionado)
+admin.site.register(Autorizacao_para_Pesquisa_CREI_Escola)
+admin.site.register(Furto_Extravio_ou_Perda_de_Equipamentos)
+admin.site.register(Solicitacao_de_Espaco_Fisico_Escola_CREI)
+admin.site.register(Solicitacao_Diversa)
