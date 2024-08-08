@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Consulta_Ginecologista_LGBT, Denuncia, Vacinacao_Domiciliar, RemedioEmCasa, RenovacaoReceita, Exames, SoliciteSuaCirugia, ExameCitopatologico, Gastroenterologista
+from .models import *
 
 class DenunciaForm(forms.ModelForm):
     class Meta:
@@ -152,6 +152,7 @@ class ExameCitopatologicoForm(forms.ModelForm):
         fields = '__all__'
         labels = {
             'nome': 'Nome',
+            'nomeRegistro': 'Nome de Registro',
             'cpf': 'CPF',
             'rg': 'RG',
             'endereco': 'Endereço',
@@ -160,11 +161,19 @@ class ExameCitopatologicoForm(forms.ModelForm):
             'dataColeta': 'Data da Coleta',
             'dataResultado': 'Data do Resultado',
             'resultado': 'Resultado',
+            'recebeBeneficio': 'Recebe algum benefício?',
+            'tipoDeficiencia': 'Qual tipo de deficiência?',
+            'pensamentoSuicida': 'Já teve pensamento suicida?',
+            'tentativaSuicidio': 'Já tentou suicídio?',
+            'localViolencia': 'Onde ocorreu a violência?',
+            'estadoCivil': 'Qual é o seu estado civil?',
+            'orientacaoSexual': 'Qual é a sua orientação sexual?',
+            'identidadeGenero': 'Por qual gênero você se identifica?',
         }
       
         widgets = {
-            'cpf': forms.TextInput(attrs={'type': 'number', 'placeholder': '000.000.000-00'}),
-            'rg': forms.TextInput(attrs={'type': 'number', 'placeholder': '00.000.000-0'}),
+            'cpf': forms.TextInput(attrs={'type': 'text', 'placeholder': '000.000.000-00'}),
+            'rg': forms.TextInput(attrs={'type': 'text', 'placeholder': '00.000.000-0'}),
             'endereco': forms.TextInput(attrs={'type': 'text', 'placeholder': 'Rua, número, bairro'}),
             'telefone': forms.TextInput(attrs={'pattern': '\(\d{2}\)\s*\d{5}-\d{4}', 'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
             'dataNascimento': forms.DateInput(attrs={'type': 'date'}),
@@ -188,6 +197,12 @@ class GastroenterologistaForm(forms.ModelForm):
             'horaConsulta': 'Hora da Consulta',
             'motivoConsulta': 'Motivo da Consulta',
             'possuiDeficiencia': 'Possui alguma deficiência?',
+            'tipoDeficiencia': 'Qual tipo de deficiência?',
+            'nivelEscolaridade': 'Qual é o seu nível de escolaridade?',
+            'trabalhoSituacao': 'Qual é a sua situação de trabalho?',
+            'orientacaoSexual': 'Qual é a sua orientação sexual?',
+            'identidadeGenero': 'Por qual gênero você se identifica?',
+            'estadoCivil': 'Qual é o seu estado civil?',
         }
       
         widgets = {
@@ -201,4 +216,13 @@ class GastroenterologistaForm(forms.ModelForm):
             'nomeRegistro': forms.TextInput(attrs={'type': 'text', 'placeholder': 'Nome de Registro'}),
             'nome': forms.TextInput(attrs={'type': 'text', 'placeholder': 'Nome'}),
             'cidade': forms.TextInput(attrs={'type': 'text', 'placeholder': 'Cidade'}),
+        }
+
+class CartaoSUSForm(forms.ModelForm):
+    class Meta:
+        model = CartaoSus
+        fields = '__all__'
+        labels = {
+            'nome': 'Nome Completo',
+            'cor': 'Qual é a sua raça/cor?',
         }

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import DenunciaForm, RenovacaoReceitaForm, VacinacaoDomiciliarForm, ConsultaGinecologistaLGBTForm, RemedioEmCasaForm, ExamesForm, SoliciteCirurgiaForm, ExameCitopatologicoForm, GastroenterologistaForm
+from .forms import *
 
 # categoria de saúde
 def vigilancia_sanitaria(request):
@@ -16,6 +16,10 @@ def remedio_em_casa(request):
 
 def opera_mais(request):
     return render(request, 'opera-mais.html')
+
+def cartao_sus(request):
+    return render(request, 'cartao-sus.html')
+
 
 def denuncias(request):
     if request.method == 'POST':
@@ -120,3 +124,15 @@ def solicete_exames(request):
     else:
         form = ExamesForm()
     return render(request, 'categoria/solicite-exames.html', {'form': form})
+
+
+def solicite_cartao_sus(request):
+    if request.method == 'POST':
+        form = CartaoSUSForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form.clean()
+            return redirect('/cartao-sus')
+    else:
+        form = CartaoSUSForm()
+    return render(request, 'categoria/solicite-cartao-sus.html', {'form': form})
