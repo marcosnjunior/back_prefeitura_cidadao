@@ -1,0 +1,66 @@
+.categoria .itens {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.categoria .nome-categoria {
+    margin: 12px 0;
+}
+
+.item {
+    text-align: center;
+    text-decoration: none;
+}
+
+.item:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.item .icone {
+    background-color: #ffa929;
+    padding: 18px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+.icone svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.item .nome {
+    font-size: 12px;
+    margin-top: 8px;
+    color: black;
+}
+
+.categoria.laranja .item .icone {
+    background-color: #ffa929;
+}
+
+.categoria.azul-claro .item .icone {
+    background-color: #30cde2;
+}
+
+.categoria.roxo .item .icone {
+    background-color: #764dbe;
+}
+
+.categoria.rosa .item .icone {
+    background-color: #eb2f6f;
+}
+
+.categoria.azul .item .icone {
+    background-color: #46a7f5;
+}
+
+.categoria.verde .item .icone {
+    background-color: #72c075;
+}
+
+.categoria.vermelho .item .icone {
+    background-color: #f5584c;
+}
