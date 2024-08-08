@@ -1,0 +1,17 @@
+.corpo{
+    background-color: rgb(116, 182, 182);
+    width: 800px;
+    margin: auto;
+}
+
+/* .icon{
+    width: 100px;
+    height: 100px;
+    color:rgb(116, 182, 182)
+} */
+
+.icon svg {
+    width: 20px;
+    height: 20px;
+    fill: rgb(190, 0, 0);
+}
