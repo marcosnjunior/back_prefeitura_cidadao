@@ -172,6 +172,35 @@ class ExameCitopatologico(models.Model):
     class Meta:
         verbose_name = 'LGBT - Exame Citopatológico'
 
+class ExameEndocrinologia(models.Model):
+    nome = models.CharField(max_length=100)
+    nomeRegistro = models.CharField(max_length=100)
+    telefone = models.CharField(max_length=15)
+    cidade = models.CharField(max_length=100)
+    email = models.EmailField()
+    endereco = models.CharField(max_length=100)
+    dataNascimento = models.DateField()
+    identidadeGenero = models.CharField(max_length=2, choices=GENERO_CHOICES)
+    orientacaoSexual = models.CharField(max_length=2, choices=GENERO_CHOICES)
+    cor = models.CharField(max_length=2, choices=COR_CHOICES)
+    estadoCivil = models.CharField(max_length=2, choices=ESTADO_CIVIL_CHOICES)
+    localViolencia = models.CharField(max_length=1, choices=LOCAL_DE_VIOLENCIA_CHOICES)
+    cpf = models.CharField(max_length=14)
+    temDeficiencia = models.CharField(max_length=1, choices=SIM_OU_NAO)
+    tipoDeficiencia = models.CharField(max_length=2, choices=TIPO_DEFICIENCIA_CHOICES, blank=True, null=True)
+    recebeBeneficio = models.CharField(max_length=2, choices=RECEBE_TIPO_BENEFICIO_CHOICES)
+    pensamentoSuicida = models.CharField(max_length=1, choices=SIM_OU_NAO)
+    tentativaSuicidio = models.CharField(max_length=1, choices=SIM_OU_NAO)
+    nivelEscolaridade = models.CharField(max_length=2, choices=GRAU_DE_ESCOLARIDADE_CHOICES, null=True)
+
+    def __str__(self):
+        return self.nome
+    
+    class Meta:
+        verbose_name = 'LGBT - Exame Endocrinologia'
+
+
+
 # Cartão SUS
 class CartaoSus(models.Model):
     nome = models.CharField(max_length=100)

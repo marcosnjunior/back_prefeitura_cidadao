@@ -21,6 +21,7 @@ urlpatterns = [
     path("lgbt-igualdade/consulta-ginecologista", views.consulta_ginecologista_lgbt),
     path("lgbt-igualdade/gastroenterologista", views.gastroenterologista),
     path("lgbt-igualdade/exame-citopatologico", views.exame_citopatologico),
+    path("lgbt-igualdade/exame-endocrinologia", views.exame_endocrinologia),
     # cartaosus
     path("cartao-sus/solicite-cartao-sus", views.solicite_cartao_sus),
 ]

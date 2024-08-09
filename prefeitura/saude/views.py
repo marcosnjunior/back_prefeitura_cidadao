@@ -77,6 +77,18 @@ def gastroenterologista(request):
         form = GastroenterologistaForm()
     return render(request, 'categoria/gastroenterologista.html', {'form': form})
 
+def exame_endocrinologia(request):
+    if request.method == 'POST':
+        form = ExameEndocrinologiaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form.clean()
+            return redirect('/saude/lgbt-igualdade')
+    else:
+        form = ExameEndocrinologiaForm()
+    return render(request, 'categoria/exame-endocrinologia.html', {'form': form})
+
+
 # remedio_em_casa
 
 def pedidos_remedios(request):

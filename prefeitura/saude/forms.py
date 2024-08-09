@@ -48,7 +48,7 @@ class VacinacaoDomiciliarForm(forms.ModelForm):
             'rua': forms.TextInput(attrs={'placeholder': 'Rua'}),
             'pontoReferencia': forms.TextInput(attrs={'placeholder': 'Ponto de Referência'}),
             'numeroCasa': forms.NumberInput(attrs={'min': 0}),
-            'telefone': forms.TextInput(attrs={'pattern': '\(\d{2}\)\s*\d{5}-\d{4}', 'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
+            'telefone': forms.TextInput(attrs={'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
         }
         
 class ConsultaGinecologistaLGBTForm(forms.ModelForm):
@@ -98,7 +98,7 @@ class RemedioEmCasaForm(forms.ModelForm):
         }
 
         widgets = {
-            'telefone': forms.TextInput(attrs={'pattern': '\(\d{2}\)\s*\d{5}-\d{4}', 'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
+            'telefone': forms.TextInput(attrs={'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
             'cep': forms.TextInput(attrs={'placeholder': '00000-000', 'pattern': '\d{5}-\d{3}'}),
             'dataNascimento': forms.DateInput(attrs={'type': 'date'}),
             'numeroCNS': forms.NumberInput(attrs={'placeholder': '000000000000000'}),
@@ -164,7 +164,7 @@ class ExamesForm(forms.ModelForm):
             'cpf': forms.TextInput(attrs={'placeholder': '000.000.000-00'}),
             'rg': forms.TextInput(attrs={'placeholder': '00.000.000-0'}),
             'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
-            'telefone': forms.TextInput(attrs={'pattern': '\(\d{2}\)\s*\d{5}-\d{4}', 'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
+            'telefone': forms.TextInput(attrs={'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
         }
 
 class ExameCitopatologicoForm(forms.ModelForm):
@@ -193,7 +193,7 @@ class ExameCitopatologicoForm(forms.ModelForm):
             'cpf': forms.TextInput(attrs={'placeholder': '000.000.000-00'}),
             'rg': forms.TextInput(attrs={'placeholder': '00.000.000-0'}),
             'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
-            'telefone': forms.TextInput(attrs={'pattern': '\(\d{2}\)\s*\d{5}-\d{4}', 'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
+            'telefone': forms.TextInput(attrs={'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
             'dataNascimento': forms.DateInput(attrs={'type': 'date'}),
         }
 
@@ -223,7 +223,7 @@ class GastroenterologistaForm(forms.ModelForm):
             'nomeRegistro': forms.TextInput(attrs={'placeholder': 'Nome de Registro'}),
             'cpf': forms.TextInput(attrs={'placeholder': '000.000.000-00'}),
             'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
-            'telefone': forms.TextInput(attrs={'pattern': '\(\d{2}\)\s*\d{5}-\d{4}', 'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
+            'telefone': forms.TextInput(attrs={'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
             'dataNascimento': forms.DateInput(attrs={'type': 'date'}),
             'cidade': forms.TextInput(attrs={'placeholder': 'Cidade'}),
             'email': forms.EmailInput(attrs={'placeholder': 'E-mail'}),
@@ -236,4 +236,42 @@ class CartaoSUSForm(forms.ModelForm):
         labels = {
             'nome': 'Nome Completo',
             'cor': 'Qual é a sua raça/cor?',
+        }
+
+
+class ExameEndocrinologiaForm(forms.ModelForm):
+    class Meta:
+        model = ExameEndocrinologia
+        fields = '__all__'
+        labels = {
+            'nome': 'Nome Completo',
+            'nomeRegistro': 'Nome de Registro',
+            'cpf': 'CPF',
+            'endereco': 'Endereço',
+            'telefone': 'Telefone',
+            'dataNascimento': 'Data de Nascimento',
+            'motivoConsulta': 'Motivo da Consulta',
+            'possuiDeficiencia': 'Possui alguma deficiência?',
+            'tipoDeficiencia': 'Qual tipo de deficiência?',
+            'nivelEscolaridade': 'Qual é o seu nível de escolaridade?',
+            'trabalhoSituacao': 'Qual é a sua situação de trabalho?',
+            'orientacaoSexual': 'Qual é a sua orientação sexual?',
+            'identidadeGenero': 'Por qual gênero você se identifica?',
+            'estadoCivil': 'Qual é o seu estado civil?',
+            'recebeBeneficio': 'Recebe algum benefício?',
+            'pensamentoSuicida': 'Já teve pensamento suicida?',
+            'tentativaSuicidio': 'Já tentou suicídio?',
+            'localViolencia': 'Onde ocorreu a violência?',
+            'temDeficiencia': 'Possui alguma deficiência?',
+        }
+      
+        widgets = {
+            'nome': forms.TextInput(attrs={'placeholder': 'Nome Completo'}),
+            'nomeRegistro': forms.TextInput(attrs={'placeholder': 'Nome de Registro'}),
+            'cpf': forms.TextInput(attrs={'placeholder': '000.000.000-00'}),
+            'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
+            'telefone': forms.TextInput(attrs={'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
+            'dataNascimento': forms.DateInput(attrs={'type': 'date'}),
+            'cidade': forms.TextInput(attrs={'placeholder': 'Cidade'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'E-mail'}),
         }
