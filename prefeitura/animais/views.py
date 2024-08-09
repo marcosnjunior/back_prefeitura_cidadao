@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .forms import ColetaAnimaisMortosForm, ApreensaoAnimalForm, DenunciaForm
+from .forms import *
 # Create your views here.
 
 def coleta(request):
@@ -38,4 +38,40 @@ def Denuncia(request):
         form = DenunciaForm()
 
     return render(request, "Denuncia.html", {"form": form})
+
+def AgendaConsulta(request):
+    if request.method == "POST":
+        form = AgendaConsultaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form.clean()
+            return redirect("/thanks/")
+    else:
+        form = AgendaConsultaForm()
+
+    return render(request, "AgendaConsulta.html", {"form": form})
+
+def AgendaCastracao(request):
+    if request.method == "POST":
+        form = AgendaCastracaoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form.clean()
+            return redirect("/thanks/")
+    else:
+        form = AgendaCastracaoForm()
+
+    return render(request, "AgendaCastracao.html", {"form": form})
+
+def HospitalVeterinario(request):
+    if request.method == "POST":
+        form = HospitalVeterinarioForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form.clean()
+            return redirect("/thanks/")
+    else:
+        form = HospitalVeterinarioForm()
+
+    return render(request, "HospitalVeterinario.html", {"form": form})
 

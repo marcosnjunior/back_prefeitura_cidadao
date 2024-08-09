@@ -47,3 +47,34 @@ class Denuncia(models.Model):
     
 # class CadrastroDeProtetores(models.Model):
 
+class AgendaConsulta(models.Model):
+    ANIMAL_De_GRANDE_PORTE = [
+        ("Cavalo", "Cavalo"),
+        ("Boi", "Boi"),
+        ("Cabra", "Cabra"),
+        ("Porco", "Porco")
+    ]
+    nome = models.CharField(max_length=200)
+    telefone = models.CharField(max_length=20)
+    animal_de_grande_porte = models.CharField(max_length=6, choices=ANIMAL_De_GRANDE_PORTE)
+    
+class AgendaCastracao(models.Model):
+    ANIMAL_De_GRANDE_PORTE = [
+        ("Cavalo", "Cavalo"),
+        ("Boi", "Boi"),
+        ("Porco", "Porco")
+    ]
+    nome = models.CharField(max_length=200)
+    telefone = models.CharField(max_length=20)
+    animal_de_grande_porte = models.CharField(max_length=6, choices=ANIMAL_De_GRANDE_PORTE)
+
+class HospitalVeterinario(models.Model):
+    ANIMAL_De_GRANDE_PORTE = [
+        ("Cavalo", "Cavalo"),
+        ("Boi", "Boi"),
+        ("Cabra", "Cabra"),
+        ("Porco", "Porco")
+    ]
+    nome = models.CharField(max_length=200)
+    telefone = models.CharField(max_length=20)
+    animal_de_grande_porte = models.CharField(max_length=6, choices=ANIMAL_De_GRANDE_PORTE)
