@@ -5,11 +5,11 @@ from .choices import *
 # vigilancia-sanitaria
 class Denuncia(models.Model):
     tipo = models.CharField(max_length=100)
-    horarioFuncionamento = models.CharField(max_length=100)
+    horarioFuncionamento = models.TimeField()
     endereco = models.CharField(max_length=100)
     bairro = models.CharField(max_length=100)
     pontoReferencia = models.CharField(max_length=100)
-    horaDaDenuncia = models.CharField(max_length=100)
+    horaDaDenuncia = models.TimeField()
     motivoDenuncia = models.TextField()
     cidadeDaDenuncia = models.CharField(max_length=100)
 
@@ -23,7 +23,7 @@ class Denuncia(models.Model):
 
 class Vacinacao_Domiciliar(models.Model):
    telefone = models.CharField(max_length=15)
-   cep = models.CharField(max_length=100)
+   cep = models.CharField(max_length=10)
    bairro = models.CharField(max_length=100)
    rua = models.CharField(max_length=100)
    numeroCasa = models.IntegerField()
@@ -40,15 +40,14 @@ class Vacinacao_Domiciliar(models.Model):
 
 class RemedioEmCasa(models.Model):
     nome = models.CharField(max_length=100)
-    numeroCNS = models.CharField(max_length=100)
+    numeroCNS = models.IntegerField()
     unidadeSaude = models.CharField(max_length=100)
     endereco = models.CharField(max_length=100)
     bairro = models.CharField(max_length=100)
-    cep = models.CharField(max_length=100)
+    cep = models.CharField(max_length=10)
     cidade = models.CharField(max_length=100)
     telefone = models.CharField(max_length=15)
-    estadoUF = models.CharField(max_length=2)
-    cep = models.CharField(max_length=100)
+    estadoUF = models.CharField(max_length=2, choices=ESTADO_CHOICES)
     pacienteAcamado = models.CharField(max_length=1, choices=SIM_OU_NAO)
     dataNascimento = models.DateField()
     
@@ -59,8 +58,8 @@ class RemedioEmCasa(models.Model):
         verbose_name = 'Remédio em Casa'
 
 class RenovacaoReceita(models.Model):
-    cpf = models.CharField(max_length=100)
-    rg = models.CharField(max_length=100)
+    cpf = models.CharField(max_length=14)
+    rg = models.CharField(max_length=14)
     endereco = models.CharField(max_length=100)
     pontoReferencia = models.CharField(max_length=100)
     def __str__(self):
@@ -115,7 +114,7 @@ class Consulta_Ginecologista_LGBT(models.Model):
     grauParentesco = models.CharField(max_length=1, choices=GRAU_DE_PARENTESCO_CHOICES)
     localViolencia = models.CharField(max_length=1, choices=LOCAL_DE_VIOLENCIA_CHOICES)
     tenativadeSuicidio = models.CharField(max_length=1, choices=SIM_OU_NAO)
-    cpf = models.CharField(max_length=100)
+    cpf = models.CharField(max_length=14)
     dataNascimento = models.DateField()
    
     def __str__(self):
@@ -140,7 +139,7 @@ class Gastroenterologista(models.Model):
     nivelEscolaridade = models.CharField(max_length=2, choices=GRAU_DE_ESCOLARIDADE_CHOICES, null=True)
     trabalhoSituacao = models.CharField(max_length=2, choices=SITUACAO_TRABALHANDO_CHOICES, null=True)
     dataNascimento = models.DateField()
-    cpf = models.CharField(max_length=100)
+    cpf = models.CharField(max_length=14)
   
     def __str__(self):
         return self.nome
@@ -161,7 +160,7 @@ class ExameCitopatologico(models.Model):
     cor = models.CharField(max_length=2, choices=COR_CHOICES)
     estadoCivil = models.CharField(max_length=2, choices=ESTADO_CIVIL_CHOICES)
     localViolencia = models.CharField(max_length=1, choices=LOCAL_DE_VIOLENCIA_CHOICES)
-    cpf = models.CharField(max_length=100)
+    cpf = models.CharField(max_length=14)
     tipoDeficiencia = models.CharField(max_length=2, choices=TIPO_DEFICIENCIA_CHOICES)
     recebeBeneficio = models.CharField(max_length=2, choices=RECEBE_TIPO_BENEFICIO_CHOICES)
     pensamentoSuicida = models.CharField(max_length=1, choices=SIM_OU_NAO)
@@ -182,4 +181,4 @@ class CartaoSus(models.Model):
         return self.nome
     
     class Meta:
-        verbose_name = 'Cartão SUS'
+        verbose_name = 'Cartão SUS - Solicite seu cartão SUS'
