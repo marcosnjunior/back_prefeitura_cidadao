@@ -3,13 +3,22 @@ from django.shortcuts import render, redirect
 from .forms import *
 # Create your views here.
 
+def apreensao_base(request):
+    return render(request, "apreensaodeanimais.html")
+
+def saudeanimal_base(request):
+    return render(request, "saudeanimal.html")
+
+def bemestaranimal_base(request):
+    return render(request, "bemestaranimal.html")
+
 def coleta(request):
     if request.method == "POST":
         form = ColetaAnimaisMortosForm(request.POST)
         if form.is_valid():
             form.save()
             form.clean()
-            return redirect("/thanks/")
+            return redirect("/animais/apreensao-de-animal")
     else:
         form = ColetaAnimaisMortosForm()
 
@@ -21,7 +30,7 @@ def Apreensao(request):
         if form.is_valid():
             form.save()
             form.clean()
-            return redirect("/thanks/")
+            return redirect("/animais/apreensao-de-animal")
     else:
         form = ApreensaoAnimalForm()
 
@@ -33,7 +42,7 @@ def Denuncia(request):
         if form.is_valid():
             form.save()
             form.clean()
-            return redirect("/thanks/")
+            return redirect("/animais/saude-animal")
     else:
         form = DenunciaForm()
 
@@ -45,7 +54,7 @@ def AgendaConsulta(request):
         if form.is_valid():
             form.save()
             form.clean()
-            return redirect("/thanks/")
+            return redirect("/animais/bem-estar-animal")
     else:
         form = AgendaConsultaForm()
 
@@ -57,7 +66,7 @@ def AgendaCastracao(request):
         if form.is_valid():
             form.save()
             form.clean()
-            return redirect("/thanks/")
+            return redirect("/animais/bem-estar-animal")
     else:
         form = AgendaCastracaoForm()
 
@@ -69,7 +78,7 @@ def HospitalVeterinario(request):
         if form.is_valid():
             form.save()
             form.clean()
-            return redirect("/thanks/")
+            return redirect("/animais/bem-estar-animal")
     else:
         form = HospitalVeterinarioForm()
 
