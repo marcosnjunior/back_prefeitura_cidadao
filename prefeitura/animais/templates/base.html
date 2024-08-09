@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <title>Animais</title>
+</head>
+
+<body>
+    {% block base %}
+    <div class="container">
+        <div>
+            <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit">ok</button>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

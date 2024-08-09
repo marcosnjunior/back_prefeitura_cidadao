@@ -44,3 +44,6 @@ class Denuncia(models.Model):
     bairro = models.CharField(max_length=100)
     rua = models.CharField(max_length=200)
     pontoRef = models.CharField(max_length=200)
+    
+# class CadrastroDeProtetores(models.Model):
+

@@ -39,4 +39,3 @@ def Denuncia(request):
 
     return render(request, "Denuncia.html", {"form": form})
 
-            
