@@ -12,13 +12,20 @@ class DenunciaForm(forms.ModelForm):
             'endereco': 'Endereço',
             'bairro': 'Bairro',
             'pontoReferencia': 'Ponto de Referência',
-            'horaDaDenuncia': 'Hora da Denúncia',
             'motivoDenuncia': 'Motivo da Denúncia',
             'cidadeDaDenuncia': 'Cidade da Denúncia',
+            'horaDaDenuncia': 'Hora da Denúncia',
         }
 
-        weight = {
-            'horaDaDenuncia': forms.TimeInput(attrs={'type': 'time'}),
+        widgets = {
+            'tipo': forms.TextInput(attrs={'placeholder': 'Tipo de Estabelecimento'}),
+            'endereco': forms.TextInput(attrs={'placeholder': 'Endereço'}),
+            'bairro': forms.TextInput(attrs={'placeholder': 'Bairro'}),
+            'motivoDenuncia': forms.Textarea(attrs={'placeholder': 'Motivo da Denúncia'}),
+            'cidadeDaDenuncia': forms.TextInput(attrs={'placeholder': 'Cidade da Denúncia'}),
+            'horarioFuncionamento': forms.TextInput(attrs={'type': 'time', 'placeholder': '00:00'}),
+            'horaDaDenuncia': forms.TextInput(attrs={'type': 'time', 'placeholder': '00:00'}),
+            'pontoReferencia': forms.TextInput(attrs={'placeholder': 'Ponto de Referência'}),
         }
         
 class VacinacaoDomiciliarForm(forms.ModelForm):
@@ -36,6 +43,10 @@ class VacinacaoDomiciliarForm(forms.ModelForm):
         }
 
         widgets = {
+            'cep': forms.TextInput(attrs={'placeholder': '00000-000', 'pattern': '\d{5}-\d{3}'}),
+            'bairro': forms.TextInput(attrs={'placeholder': 'Bairro'}),
+            'rua': forms.TextInput(attrs={'placeholder': 'Rua'}),
+            'pontoReferencia': forms.TextInput(attrs={'placeholder': 'Ponto de Referência'}),
             'numeroCasa': forms.NumberInput(attrs={'min': 0}),
             'telefone': forms.TextInput(attrs={'pattern': '\(\d{2}\)\s*\d{5}-\d{4}', 'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
         }
@@ -88,12 +99,21 @@ class RemedioEmCasaForm(forms.ModelForm):
 
         widgets = {
             'telefone': forms.TextInput(attrs={'pattern': '\(\d{2}\)\s*\d{5}-\d{4}', 'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
+            'cep': forms.TextInput(attrs={'placeholder': '00000-000', 'pattern': '\d{5}-\d{3}'}),
+            'dataNascimento': forms.DateInput(attrs={'type': 'date'}),
+            'numeroCNS': forms.NumberInput(attrs={'placeholder': '000000000000000'}),
+            'nome': forms.TextInput(attrs={'placeholder': 'Nome Completo'}),
+            'unidadeSaude': forms.TextInput(attrs={'placeholder': 'Unidade de Saúde'}),
+            'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
+            'bairro': forms.TextInput(attrs={'placeholder': 'Bairro'}),
+            'cidade': forms.TextInput(attrs={'placeholder': 'Cidade'}),
         }
 
 class RenovacaoReceitaForm(forms.ModelForm):
     class Meta:
         model = RenovacaoReceita
         fields = '__all__'
+       
         labels = {
             'cpf': 'CPF',
             'rg': 'RG',
@@ -101,11 +121,11 @@ class RenovacaoReceitaForm(forms.ModelForm):
             'pontoReferencia': 'Ponto de Referência',
         }
        
-        weight = {
-            'cpf': forms.TextInput(attrs={'type': 'number', 'placeholder': '000.000.000-00'}),
-            'rg': forms.TextInput(attrs={'type': 'number', 'placeholder': '00.000.000-0'}),
-            'endereco': forms.TextInput(attrs={'type': 'text', 'placeholder': 'Rua, número, bairro'}),
-            'pontoReferencia': forms.TextInput(attrs={'type': 'text', 'placeholder': 'Ponto de referência'}),
+        widgets = {
+            'cpf': forms.TextInput(attrs={'placeholder': '000.000.000-00', 'pattern': '\d{3}\.\d{3}\.\d{3}-\d{2}'}),
+            'rg': forms.TextInput(attrs={'placeholder': '00.000.000-0'}),
+            'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
+            'pontoReferencia': forms.TextInput(attrs={'placeholder': 'Ponto de referência'}),
         }
 
 class SoliciteCirurgiaForm(forms.ModelForm):
@@ -121,9 +141,9 @@ class SoliciteCirurgiaForm(forms.ModelForm):
         }
        
         widgets = {
-            'cpf': forms.TextInput(attrs={'type': 'number', 'placeholder': '000.000.000-00'}),
-            'rg': forms.TextInput(attrs={'type': 'number', 'placeholder': '00.000.000-0'}),
-            'endereco': forms.TextInput(attrs={'type': 'text', 'placeholder': 'Rua, número, bairro'}),
+            'cpf': forms.TextInput(attrs={'placeholder': '000.000.000-00'}),
+            'rg': forms.TextInput(attrs={'placeholder': '00.000.000-0'}),
+            'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
         }
 
 class ExamesForm(forms.ModelForm):
@@ -140,9 +160,10 @@ class ExamesForm(forms.ModelForm):
         }
       
         widgets = {
-            'cpf': forms.TextInput(attrs={'type': 'number', 'placeholder': '000.000.000-00'}),
-            'rg': forms.TextInput(attrs={'type': 'number', 'placeholder': '00.000.000-0'}),
-            'endereco': forms.TextInput(attrs={'type': 'text', 'placeholder': 'Rua, número, bairro'}),
+            'informacoesAdicionais': forms.Textarea(attrs={'placeholder': 'Informações adicionais'}),
+            'cpf': forms.TextInput(attrs={'placeholder': '000.000.000-00'}),
+            'rg': forms.TextInput(attrs={'placeholder': '00.000.000-0'}),
+            'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
             'telefone': forms.TextInput(attrs={'pattern': '\(\d{2}\)\s*\d{5}-\d{4}', 'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
         }
 
@@ -158,9 +179,6 @@ class ExameCitopatologicoForm(forms.ModelForm):
             'endereco': 'Endereço',
             'telefone': 'Telefone',
             'dataNascimento': 'Data de Nascimento',
-            'dataColeta': 'Data da Coleta',
-            'dataResultado': 'Data do Resultado',
-            'resultado': 'Resultado',
             'recebeBeneficio': 'Recebe algum benefício?',
             'tipoDeficiencia': 'Qual tipo de deficiência?',
             'pensamentoSuicida': 'Já teve pensamento suicida?',
@@ -172,13 +190,11 @@ class ExameCitopatologicoForm(forms.ModelForm):
         }
       
         widgets = {
-            'cpf': forms.TextInput(attrs={'type': 'text', 'placeholder': '000.000.000-00'}),
-            'rg': forms.TextInput(attrs={'type': 'text', 'placeholder': '00.000.000-0'}),
-            'endereco': forms.TextInput(attrs={'type': 'text', 'placeholder': 'Rua, número, bairro'}),
+            'cpf': forms.TextInput(attrs={'placeholder': '000.000.000-00'}),
+            'rg': forms.TextInput(attrs={'placeholder': '00.000.000-0'}),
+            'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
             'telefone': forms.TextInput(attrs={'pattern': '\(\d{2}\)\s*\d{5}-\d{4}', 'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
             'dataNascimento': forms.DateInput(attrs={'type': 'date'}),
-            'dataColeta': forms.DateInput(attrs={'type': 'date'}),
-            'dataResultado': forms.DateInput(attrs={'type': 'date'}),
         }
 
 class GastroenterologistaForm(forms.ModelForm):
@@ -186,15 +202,12 @@ class GastroenterologistaForm(forms.ModelForm):
         model = Gastroenterologista
         fields = '__all__'
         labels = {
-            'nome': 'Nome',
+            'nome': 'Nome Completo',
             'nomeRegistro': 'Nome de Registro',
             'cpf': 'CPF',
-            'rg': 'RG',
             'endereco': 'Endereço',
             'telefone': 'Telefone',
             'dataNascimento': 'Data de Nascimento',
-            'dataConsulta': 'Data da Consulta',
-            'horaConsulta': 'Hora da Consulta',
             'motivoConsulta': 'Motivo da Consulta',
             'possuiDeficiencia': 'Possui alguma deficiência?',
             'tipoDeficiencia': 'Qual tipo de deficiência?',
@@ -206,16 +219,14 @@ class GastroenterologistaForm(forms.ModelForm):
         }
       
         widgets = {
-            'cpf': forms.TextInput(attrs={'type': 'number', 'placeholder': '000.000.000-00'}),
-            'rg': forms.TextInput(attrs={'type': 'number', 'placeholder': '00.000.000-0'}),
-            'endereco': forms.TextInput(attrs={'type': 'text', 'placeholder': 'Rua, número, bairro'}),
+            'nome': forms.TextInput(attrs={'placeholder': 'Nome Completo'}),
+            'nomeRegistro': forms.TextInput(attrs={'placeholder': 'Nome de Registro'}),
+            'cpf': forms.TextInput(attrs={'placeholder': '000.000.000-00'}),
+            'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
             'telefone': forms.TextInput(attrs={'pattern': '\(\d{2}\)\s*\d{5}-\d{4}', 'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
             'dataNascimento': forms.DateInput(attrs={'type': 'date'}),
-            'dataConsulta': forms.DateInput(attrs={'type': 'date'}),
-            'horaConsulta': forms.TimeInput(attrs={'type': 'time'}),
-            'nomeRegistro': forms.TextInput(attrs={'type': 'text', 'placeholder': 'Nome de Registro'}),
-            'nome': forms.TextInput(attrs={'type': 'text', 'placeholder': 'Nome'}),
-            'cidade': forms.TextInput(attrs={'type': 'text', 'placeholder': 'Cidade'}),
+            'cidade': forms.TextInput(attrs={'placeholder': 'Cidade'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'E-mail'}),
         }
 
 class CartaoSUSForm(forms.ModelForm):
