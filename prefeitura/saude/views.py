@@ -1,5 +1,11 @@
 from django.shortcuts import render, redirect
-from .forms import *
+
+from .forms.vigilancia_sanitaria import DenunciaForm
+from .forms.vacina import VacinacaoDomiciliarForm
+from .forms.lgbt_igualdade import ConsultaGinecologistaLGBTForm, ExameCitopatologicoForm, GastroenterologistaForm, ExameEndocrinologiaForm
+from .forms.remedio_em_casa import RemedioEmCasaForm, RenovacaoReceitaForm
+from .forms.opera_mais import SoliciteCirurgiaForm, ExamesForm
+from .forms.cartao_sus import CartaoSUSForm
 
 # categoria de saúde
 def vigilancia_sanitaria(request):
@@ -38,7 +44,7 @@ def vacinacao(request):
         if form.is_valid():
             form.save()
             form.clean()
-            return redirect('/saude/vigilancia-sanitaria')
+            return redirect('/saude/vacina')
     else:
         form = VacinacaoDomiciliarForm()
     return render(request, 'categoria/vacinacao.html', {'form': form})
