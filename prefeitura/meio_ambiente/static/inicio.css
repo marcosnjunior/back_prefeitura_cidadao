@@ -1,17 +1,92 @@
-.corpo{
-    background-color: rgb(116, 182, 182);
-    width: 800px;
-    margin: auto;
+.titulo{
+    color: black;
+    font-family: sans-serif;
 }
 
-/* .icon{
-    width: 100px;
-    height: 100px;
-    color:rgb(116, 182, 182)
-} */
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-.icon svg {
-    width: 20px;
-    height: 20px;
-    fill: rgb(190, 0, 0);
+.corpo{
+    margin: auto;
+    width: 500px;
+    height: 400px;
+    /* background-color: blueviolet; */
+    text-align: center;
+}
+
+svg{
+    width: 30px;
+    height: 30px;
+    fill: cornsilk;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.simbolo{
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    background-color: #72C075;
+}
+
+.class_servicos{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 120px;
+    background-color: #72C075;
+}
+
+.servicos{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.disponiveis{
+    /* background-color: tomato; */
+    text-align: justify;
+}
+
+.disponiveis2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 12px;
+}
+
+.container1{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+
+}
+
+.block{
+    background-color: #72C075;
+    border-radius: 3px;
+    width: 48%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.block:hover{
+    background-color: rgb(146, 202, 148);
+}
+.plantio{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-left: 5px;
+    font-size: 20px;
 }
