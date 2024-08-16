@@ -17,7 +17,7 @@ class Conselho_tutelar (models.Model):
         return self.nome
     
 
-class Ptts_ouvidoria (models.Model):
+class Ptts_ouvidoria_maria_de_nazare (models.Model):
     nome = models.CharField(max_length=100)
     
 

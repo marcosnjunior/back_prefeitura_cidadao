@@ -30,8 +30,8 @@ def cultura(request):
 def conselho_tutelar(request):
     return render(request, 'eventos/conselho_tutelar.html', {})
 
-def ptts_ouvidoria(request):
-    return render(request, 'eventos/ptts_ouvidoria.html', {})
+def ptts_ouvidoria_maria_de_nazare(request):
+    return render(request, 'eventos/ptts_ouvidoria_maria_de_nazare.html', {})
 
 
 
