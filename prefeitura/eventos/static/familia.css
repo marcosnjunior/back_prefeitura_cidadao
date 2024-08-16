@@ -7,21 +7,7 @@ body {
     margin: auto;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    padding: 0 40px 0 0;
-}
-
-.navbar .voltar {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    padding: 10px;
-}
-
-.navbar .titulo {
-    text-align: center;
-    flex: 1;
-    font-size: 14px;
+.titular {
+    width: 360px;
+    margin: auto;
 }

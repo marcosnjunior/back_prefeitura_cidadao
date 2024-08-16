@@ -12,18 +12,115 @@
 
 <body>
     <div class="container">
-        {% include 'navbar.html' with pagina=True %}
+        <!--{% include 'navbar.html' with pagina=True %} -->
 
-        <h3>{% block titulo %}{% endblock %}</h3>
+        <h4>Cadastramentos</h4>
+
+        <!--<h3>{% block titulo %}{% endblock %}</h3>-->
 
         <div class="conteudo">
-            {% block conteudo %}{% endblock %}
+            <!--{% block conteudo %}{% endblock %}-->
         </div>
 
         <h6>Informações</h6>
 
         <form action="" method="post">
             {% csrf_token %}
+
+            <label>
+                <h4>Nome Completo *</h4>
+            </label>
+
+            <label>
+                <h4>Idade *</h4>
+            </label>
+
+            <label>
+                <h4>Data de Nascimento *</h4>
+            </label>
+
+            <label>
+                <h4>CPF *</h4>
+            </label>
+
+            <label>
+                <h4>RG *</h4>
+            </label>
+
+            <label>
+                <h4>Endereço Completo *</h4>
+            </label>
+
+            <label>
+                <h4>Número da Residência *</h4>
+            </label>
+
+            <label>
+                <h4>CEP *</h4>
+            </label>
+
+            <label>
+                <h4>Ponto de Referência *</h4>
+            </label>
+
+            <label>
+                <h4>Bairro *</h4>
+            </label>
+
+            <label>
+                <h4>Cidade *</h4>
+            </label>
+
+            <label>
+                <h4>UF *</h4>
+            </label>
+
+            <label>
+                <h4>Complemento *</h4>
+            </label>
+
+            <label>
+                <h4>Telefone Residencial *</h4>
+            </label>
+
+            <label>
+                <h4>Celular *</h4>
+            </label>
+
+            <label>
+                <h4>E-mail *</h4>
+            </label>
+
+            <label>
+                <h4>Como ficou sabendo do serviço 'Família Acolhedora?' *</h4>
+            </label>
+
+            <label>
+                <h4>Preferência do Perfil / Idade para acolhimento *</h4>
+            </label>
+
+            <label>
+                <h4>Preferência de Gênero para acolhimento *</h4>
+            </label>
+
+            <label>
+                <h4>Possui Renda Fixa? *</h4>
+            </label>
+
+            <label>
+                <h4>Caso Possua, qual a Renda Aproximada?</h4>
+            </label>
+
+            <label>
+                <h4>É Residente de João Pessoa no mínimo há 2 anos? *</h4>
+            </label>
+
+            <label>
+                <h4>Espaço destinado à família acolhedora para deixar uma mensagem de sua escolha</h4>
+            </label>
+
+
+
             <label>
                 <h4>Descrição *</h4>
                 <textarea name="descricao" placeholder="Conteúdo" required></textarea>
