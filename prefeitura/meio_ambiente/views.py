@@ -15,7 +15,7 @@ def plantio(request):
         if form.is_valid():
             form.save()
             form.clean()
-            return redirect('/meio_ambiente/plantio_de_arvores')
+            return redirect('/meio_ambiente/autorizacao_arborea')
     else:
         form = Plantio_de_ArvoreForm()
     return render(request, 'plantio_de_arvores.html', {'form': form})
@@ -31,3 +31,30 @@ def poda(request):
     else:
         form = Poda_de_ArvoresForm()
     return render(request, 'poda_de_arvores.html', {'form': form})
+
+def denuncia_ambiental(request):
+    return render(request, 'denuncia_ambiental.html')
+
+
+
+def lancamento(request):
+    if request.method == 'POST':
+        form = lancamento_de_agua_servidasForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form.clean()
+            return redirect('/meio_ambiente/lancamento_de_aguas')
+    else:
+        form = lancamento_de_agua_servidasForm()
+    return render(request, 'lancamento_agua_servidas.html', {'form': form})
+
+def esgoto(request):
+    if request.method == 'POST':
+        form = lancamento_esgotoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form.clean()
+            return redirect('/meio_ambiente/lancamento_esgoto')
+    else:
+        form = lancamento_esgotoForm()
+    return render(request, 'lancamento_esgoto.html', {'form': form})
