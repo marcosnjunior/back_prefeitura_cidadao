@@ -23,6 +23,18 @@ def familia_acolhedora_(request):
 #resultado = Fornecedor.objects.all()
     #return HttpResponse(resultado)
 
+def cultura(request):
+    return render(request, 'eventos/cultura.html', {})
+
+
+def conselho_tutelar(request):
+    return render(request, 'eventos/conselho_tutelar.html', {})
+
+def ptts_ouvidoria(request):
+    return render(request, 'eventos/ptts_ouvidoria.html', {})
+
+
+
 
 
 
