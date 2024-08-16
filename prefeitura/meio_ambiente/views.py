@@ -19,3 +19,15 @@ def plantio(request):
     else:
         form = Plantio_de_ArvoreForm()
     return render(request, 'plantio_de_arvores.html', {'form': form})
+
+
+def poda(request):
+    if request.method == 'POST':
+        form = Poda_de_ArvoresForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form.clean()
+            return redirect('/meio_ambiente/poda_de_arvores')
+    else:
+        form = Poda_de_ArvoresForm()
+    return render(request, 'poda_de_arvores.html', {'form': form})
