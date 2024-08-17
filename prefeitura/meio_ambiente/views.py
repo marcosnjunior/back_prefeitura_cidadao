@@ -43,10 +43,12 @@ def lancamento(request):
         if form.is_valid():
             form.save()
             form.clean()
-            return redirect('/meio_ambiente/lancamento_de_aguas')
+            return redirect('/meio_ambiente/lancamento_de_agua_servidas')
     else:
         form = lancamento_de_agua_servidasForm()
+        print("Chegou aqui")
     return render(request, 'lancamento_agua_servidas.html', {'form': form})
+    print("não pegou if/else")
 
 def esgoto(request):
     if request.method == 'POST':
@@ -58,3 +60,47 @@ def esgoto(request):
     else:
         form = lancamento_esgotoForm()
     return render(request, 'lancamento_esgoto.html', {'form': form})
+
+def poluicaoSonora(request):
+    if request.method == 'POST':
+        form = poluicao_sonoraForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form.clean()
+            return redirect('/meio_ambiente/poluicao_sonora')
+    else:
+        form = poluicao_sonoraForm()
+    return render(request, 'poluicao_sonora.html', {'form': form})
+
+def corteIrregularArvores(request):
+    if request.method == 'POST':
+        form = corte_irregular_arvoresForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form.clean()
+            return redirect('/meio_ambiente/corte_irregular_arvores')
+    else:
+        form = corte_irregular_arvoresForm()
+    return render(request, 'corte_irregular_arvores.html', {'form': form})
+
+def poluicaoAtmosferica(request):
+    if request.method == 'POST':
+        form = poluicao_atmosfericaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form.clean()
+            return redirect('/meio_ambiente/poluicao_atmosferica')
+    else:
+        form = poluicao_atmosfericaForm()
+    return render(request, 'poluicao_atmosferica.html', {'form': form})
+
+def invasaoAreaPreservacaoPermanente(request):
+    if request.method == 'POST':
+        form = invasao_area_preservacao_permanenteForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form.clean()
+            return redirect('/meio_ambiente/invasao_area_preservacao_permanente')
+    else:
+        form = invasao_area_preservacao_permanenteForm()
+    return render(request, 'invasao_area_preservacao_permanente.html', {'form': form})

@@ -90,3 +90,5 @@ class invasao_area_preservacao_permanente(models.Model):
 
     def __str__(self):
         return self.rua_problema
+
+
