@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "educacao",
     "animais",
     "saude",
+    "infraestrutura"
 ]
 
 MIDDLEWARE = [
