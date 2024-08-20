@@ -1,12 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'forms.css' %}">
     <title>Invasão de Area de Preservacao Permanente</title>
 </head>
 <body>
-    <div class="div">
+    <div class="corpo">
+        <div class="titulo">
+            <p class="titulo">Serviços</p>
+        </div>
+        <h2>Invasão de Área de Preservação <br> Permanente</h2>
         <form action="" method="post">
             {{form}}
             {% csrf_token %}
