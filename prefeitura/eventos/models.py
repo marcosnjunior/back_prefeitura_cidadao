@@ -7,6 +7,9 @@ class Cultura (models.Model):
 
     def __str__(self):
         return self.nome
+    
+    class Meta:
+        verbose_name = 'Cultura'
 
 
 class Conselho_tutelar (models.Model):
@@ -16,14 +19,22 @@ class Conselho_tutelar (models.Model):
     def __str__(self):
         return self.nome
     
+    class Meta:
+        verbose_name = 'Conselho Tutelar'
 
 class Ptts_ouvidoria_maria_de_nazare (models.Model):
+    feedback = models.TextField()
     nome = models.CharField(max_length=100)
-    
+    cpf = models.IntegerField()
+    telefone = models.IntegerField()
 
     def __str__(self):
         return self.nome
     
+    class Meta:
+        verbose_name = 'PTTS - Ouvidoria - Maria de Nazaré'
+
+
 
 class Familia_acolhedora (models.Model):
     nome = models.CharField(max_length=100)
@@ -31,6 +42,12 @@ class Familia_acolhedora (models.Model):
 
     def __str__(self):
         return self.nome
+    
+    class Meta:
+        verbose_name = 'Família Acolhedora'
+    
+
+
 #modelo do banco
 """
 class Fornecedor (models.Model):
