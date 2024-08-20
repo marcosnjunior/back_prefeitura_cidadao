@@ -15,6 +15,7 @@
         <h2>Poluição Atmosférica</h2>
         <form action="" method="post">
             {{form}}
+            {% csrf_token %}
             <button type="submit">Solicitar</button>
         </form>
     </div>
