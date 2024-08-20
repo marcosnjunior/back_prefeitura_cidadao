@@ -1,0 +1,71 @@
+.icone {
+    background-color: #764dbe;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    margin: auto;
+}
+
+.icone svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.titulo-categoria {
+    text-align: center;
+}
+
+
+.botao-servicos {
+    background-color: #764dbe;
+    border-radius: 1000px;
+    border: lightgray 1px solid;
+    padding: 10px 15px;
+    display: inline-block;
+    color: white;
+}
+
+.servicos {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.servico {
+    display: flex;
+    align-items: center;
+    background-color: #764dbe;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 3px;
+    height: 85px;
+}
+
+.botao-servicos:hover, .servico:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+
+
+.teste-center {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.teste-center .teste-center1 {
+    text-align: center;
+    flex: 1;
+    font-size: 14px;
+    margin-top: 0px
+}
+
+h5 {
+    font-weight: normal; 
+}
