@@ -1,0 +1,105 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaoLeite</title>
+</head>
+<body>
+    
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            
+            <form action="/eventos2/paoleite" method="POST">
+
+                {% csrf_token %}
+                
+                    <label for="nome">Nome:</label>
+                    <input required type="text" name="nome" id="nome">
+                    
+                    <br>
+                
+                    <label for="dataNascimento">Data de Nascimento:</label>
+                    <input required type="text" name="dataNascimento" id="dataNascimento">
+                    
+                    <br>
+
+                    <label for="idade">Idade:</label>
+                    <input required type="text" name="idade" id="idade">
+                    
+                    <br>
+                    
+                    <label for="telefone">Telefone:</label>
+                    <input required type="text" name="telefone" id="telefone">
+                    
+                    <br>
+
+                    <label for="cpf">Cpf:</label>
+                    <input required type="text" name="cpf" id="cpf">
+                    
+                    <br>
+
+                    <label for="endereco">Endereco:</label>
+                    <input required type="text" name="endereco" id="endereco">
+                    
+                    <br>
+
+                    <label for="bairro">bairro:</label>
+                    <input required type="text" name="bairro" id="bairro">
+                    
+                    <br>
+
+                    <label for="carteiraTrabalhoAss">Possui Carteira de Trabalho Assinada?</label>
+                    <input required type="text" name="carteiraTrabalhoAss" id="carteiraTrabalhoAss">
+                    
+                    <br>
+
+                    <label for="possuiDeficiencia">Possui Deficiencia? </label>
+                    <input required type="text" name="possuiDeficiencia" id="possuiDeficiencia">
+                    
+                    <br>
+
+                    <label for="estadoCivil">Estado Civil:</label>
+                    <input required type="text" name="estadoCivil" id="estadoCivil">
+                    
+                    <br>
+                    
+                    <label for="numeroNis">Estado Civil:</label>
+                    <input required type="text" name="numeroNis" id="numeroNis">
+                    
+                    <br>
+
+                    <label for="numeroNis">Número do NIS:</label>
+                    <input required type="text" name="estadoCivil" id="estadoCivil">
+                    
+                    <br>
+
+                    <label for="possuiBolsaFamilia">Possui Bolsa Familía?</label>
+                    <input required type="text" name="possuiBolsaFamilia" id="possuiBolsaFamilia">
+                    
+                    <br>
+
+                    <label for="possuiCartaoAlimentacao">Possui cartão alimentação?:</label>
+                    <input required type="text" name="possuiCartaoAlimentacao" id="possuiCartaoAlimentacao">
+                    
+                    <br>
+
+                    <label for=" concordoTermos">Li e concordo com os termos disponíveis na descrição*</label>
+                    <input required type="text" name=" concordoTermos" id=" concordoTermos">
+                    
+                    <br>
+        
+                
+                    <input type="submit" value="Solicitar">
+                
+                </form>
+
+            
+         </form>
+     </div>
+
+</body>
+</html>
