@@ -19,6 +19,79 @@ def familia_acolhedora(request):
 
 def familia_acolhedora_(request):
 
+    if request.method == "POST":
+        
+    
+
+    """
+        nome = request.POST.get('nome')
+        idade = request.POST.get('idade')
+        data_nascimneto = request.POST.get('data_nascimneto')
+        cpf = request.POST.get('cpf')
+        rg = request.POST.get('rg')
+        endereco = request.POST.get('endereco')
+        numero_residencia = request.POST.get('numero_residencia')
+        cep = request.POST.get('cep')
+        ponto_referencia = request.POST.get('ponto_referencia')
+        bairro = request.POST.get('bairro')
+        cidade = request.POST.get('cidade')
+        uf = request.POST.get('uf')
+        complemento = request.POST.get('complemento')
+        telefone = request.POST.get('telefone')
+        celular = request.POST.get('celular')
+        email = request.POST.get('email')
+        sabendo_servico = request.POST.get('sabendo_servico')
+        preferencia_perfil = request.POST.get('preferencia_perfil')
+        genero_acolhimento = request.POST.get('genero_acolhimento')
+        renda = request.POST.get('renda')
+        renda_aproximada = request.POST.get('renda_aproximada')
+        residente = request.POST.get('residente')
+        bem_maior = request.POST.get('bem_maior')
+
+
+
+
+        
+
+        cadastro = Familia_acolhedora()
+        cadastro.feedback = feedback
+        cadastro.nome = nome
+        cadastro.cpf = cpf
+        cadastro.telefone = telefone
+        cadastro.save()
+
+        return redirect("/eventos/familia_acolhedora")
+    
+    else:
+        return render(request, 'eventos/familia_acolhedora_.html', {})
+    """
+
+    
+    nome = 
+    idade = 
+    data_nascimneto = 
+    cpf = 
+    rg = 
+    endereco = 
+    numero_residencia = 
+    cep = 
+    ponto_referencia = 
+    bairro = 
+    cidade = 
+    uf = 
+    complemento = 
+    telefone = 
+    celular = 
+    email = 
+    sabendo_servico = 
+    preferencia_perfil = 
+    genero_acolhimento = 
+    renda = 
+    renda_aproximada = 
+    residente = 
+    bem_maior =
+    """
+
     #return HttpResponse("chegou nas views -> familia_acolhedora")
     return render(request, 'eventos/familia_acolhedora_.html', {})
 
