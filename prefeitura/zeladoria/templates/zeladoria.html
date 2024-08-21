@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeladoria</title>
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link rel="stylesheet" href="{% static 'zeladoria.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        {% include 'navbar.html' %}
+        <!-- https://pictogrammers.com/library/mdi/ (colocar svg) -->
+        <div class="icone">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>abacus</title>
+                <path
+                    d="M5 5H7V11H5V5M10 5H8V11H10V5M5 19H7V13H5V19M10 13H8V19H10V17H15V15H10V13M2 21H4V3H2V21M20 3V7H13V5H11V11H13V9H20V15H18V13H16V19H18V17H20V21H22V3H20Z" />
+             </svg>
+        </div>
+
+        <h4 class="titulo-categoria">Zeladoria</h4>
+
+        <div class="botao-servicos">Serviços</div>
+
+        <h5 class="titulo-servicos">Serviços disponíveis</h5>
+
+        <div class="servicos">
+            <a class="servico" href="/zeladoria/coleta_de_poda">
+                Coleta de Poda
+            </a>
+    
+            <a class="servico" href="/zeladoria/terreno_sem_conservacao">
+                Terreno sem Coservação
+            </a>
+    
+            <a class="servico" href="/zeladoria/limpeza_de_proprios_municipais">
+                Limpeza de Próprios Municipais
+            </a>
+    
+            <a class="servico" href="/cata_treco">
+                Cata-Treco
+            </a>
+    
+            <a class="servico" href="/zeladoria/denuncia_de_descarte_irregular_de_residuos">
+                Denúncia de Descarte Irregular de Resíduos
+            </a>
+    
+            <a class="servico" href="/zeladoria/coleta_de_residuos_diversificados">
+                Coleta de Resíduos Diversificados
+            </a>
+    
+            <a class="servico" href="/zeladoria/varricao_de_logradouros_publicos">
+                Varrição de Logradouros Públicos
+            </a>
+    
+            <a class="servico" href="/zeladoria/coleta_seletiva">
+                Coleta Seletiva (Condomínio/Empresas)
+            </a>
+    
+            <a class="servico" href="/zeladoria/falha_na_coleta_domiciliar">
+                Falha na Coleta Domiciliar
+            </a>
+    
+            <a class="servico" href="/zeladoria/coleta_de_animais_mortos">
+                Coleta de Animais Mortos
+            </a>
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>
