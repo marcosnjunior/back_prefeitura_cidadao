@@ -11,7 +11,7 @@ def problema_iluminacao(request):
         if form.is_valid():
             form.save()
             form.clean()
-            return redirect('infraestrutura/problema_iluminacao')
+            return redirect('/infraestrutura')
     else:
         form = Problema_iluminacaoForm()
     return render(request, 'problema_iluminacao.html', {'form': form})
