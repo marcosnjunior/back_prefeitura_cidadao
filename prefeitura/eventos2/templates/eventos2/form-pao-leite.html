@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PaoLeite</title>
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link rel="stylesheet" href="{% static 'formulario.css' %}">
 </head>
 <body>
     
@@ -18,82 +20,97 @@
                 {% csrf_token %}
                 
                     <label for="nome">Nome:</label>
+                    <br>
                     <input required type="text" name="nome" id="nome">
                     
                     <br>
                 
                     <label for="dataNascimento">Data de Nascimento:</label>
+                    <br>
                     <input required type="text" name="dataNascimento" id="dataNascimento">
                     
                     <br>
 
                     <label for="idade">Idade:</label>
+                    <br>
                     <input required type="text" name="idade" id="idade">
                     
                     <br>
                     
                     <label for="telefone">Telefone:</label>
+                    <br>
                     <input required type="text" name="telefone" id="telefone">
                     
                     <br>
 
                     <label for="cpf">Cpf:</label>
+                    <br>
                     <input required type="text" name="cpf" id="cpf">
                     
                     <br>
 
                     <label for="endereco">Endereco:</label>
+                    <br>
                     <input required type="text" name="endereco" id="endereco">
                     
                     <br>
 
                     <label for="bairro">bairro:</label>
+                    <br>
                     <input required type="text" name="bairro" id="bairro">
                     
                     <br>
 
                     <label for="carteiraTrabalhoAss">Possui Carteira de Trabalho Assinada?</label>
+                    <br>
                     <input required type="text" name="carteiraTrabalhoAss" id="carteiraTrabalhoAss">
                     
                     <br>
 
                     <label for="possuiDeficiencia">Possui Deficiencia? </label>
+                    <br>
                     <input required type="text" name="possuiDeficiencia" id="possuiDeficiencia">
                     
                     <br>
 
                     <label for="estadoCivil">Estado Civil:</label>
+                    <br>
                     <input required type="text" name="estadoCivil" id="estadoCivil">
                     
                     <br>
                     
                     <label for="numeroNis">Estado Civil:</label>
+                    <br>
                     <input required type="text" name="numeroNis" id="numeroNis">
                     
                     <br>
 
                     <label for="numeroNis">Número do NIS:</label>
+                    <br>
                     <input required type="text" name="estadoCivil" id="estadoCivil">
                     
                     <br>
 
                     <label for="possuiBolsaFamilia">Possui Bolsa Familía?</label>
+                    <br>
                     <input required type="text" name="possuiBolsaFamilia" id="possuiBolsaFamilia">
                     
                     <br>
 
                     <label for="possuiCartaoAlimentacao">Possui cartão alimentação?:</label>
+                    <br>
                     <input required type="text" name="possuiCartaoAlimentacao" id="possuiCartaoAlimentacao">
                     
                     <br>
 
                     <label for=" concordoTermos">Li e concordo com os termos disponíveis na descrição*</label>
+                    <br>
                     <input required type="text" name=" concordoTermos" id=" concordoTermos">
                     
                     <br>
         
                 
-                    <input type="submit" value="Solicitar">
+                    <button type="submit">Solicitar</button>
                 
                 </form>
 

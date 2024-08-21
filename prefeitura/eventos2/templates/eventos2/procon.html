@@ -5,40 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROCON-JP</title>
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link rel="stylesheet" href="{% static 'eventos2.css' %}">
 </head>
 <body>
 
-    <h1>Olá, boa tarde!</h1>
+    <div class="container">
     
+       
+        
+        <h4 class="titulo-categoria">Procon-JP</h4>
+
+        <div class="botao-servicos">Serviços</div>
+        <div class="botao-arquivos">Arquivos</div>
+
+        <h5 class="titulo-servicos">Serviços disponíveis</h5>
+
+        <div class="servicos">
+            <a class="servico" href="/eventos2/duvida">
+            Dúvidas
+            </a>
     
-    
-    <h4 class="titulo-categoria">Procon-JP</h4>
 
-    <div class="botao-servicos">Serviços</div>
-    <div class="botao-arquivos">Arquivos</div>
+        
+            <a class="servico" href="/eventos2/reclamacao">
+                Reclamação
+            </a>
 
-    <h5 class="titulo-servicos">Serviços disponíveis</h5>
+        
 
-    <div class="servicos">
-        <a class="servico" href="/eventos2/duvida">
-           Dúvidas
-        </a>
-    </div>
+        
+            <a class="servico" href="/eventos2/denuncia">
+                Denúncias
+            </a>
 
-    <div class="servicos">
-        <a class="servico" href="/eventos2/reclamacao">
-            Reclamação
-        </a>
-
-    </div>
-
-    <div class="servicos">
-        <a class="servico" href="/eventos2/denuncia">
-            Denúncias
-        </a>
-
-    </div>
-    
+        </div>
+    </div>   
     
 </body>
 </html>
