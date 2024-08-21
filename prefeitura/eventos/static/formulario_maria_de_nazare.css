@@ -8,7 +8,9 @@ h3 {
     margin-top: 10px;
     margin-bottom: 30px;
     text-align: center;
+    font-size: 14px;
 }
+
 
 h6 {
     margin: 0;
@@ -24,7 +26,7 @@ h5 {
 }
 
 .tituto-maria {
-    font-weight: 700; 
+    font-weight: 70; 
 }
 
 h4 {

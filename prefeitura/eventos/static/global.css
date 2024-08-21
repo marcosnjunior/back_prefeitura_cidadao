@@ -13,9 +13,7 @@ body {
     
 }
 
-
-
-.navbar_eventos {
+.teste-center {
     display: flex;
     align-items: center;
     padding: 5px 20px;
@@ -23,7 +21,7 @@ body {
     margin-bottom: 5px;
 }
 
-.navbar_eventos .titulo_eventos {
+.teste-center .teste-center1 {
     text-align: center;
     flex: 1;
     font-size: 14px;
