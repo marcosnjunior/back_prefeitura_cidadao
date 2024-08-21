@@ -1,0 +1,12 @@
+.base{
+    text-align: center;
+    width: 400px;
+    height: 400px;
+}
+.simbolo_img{
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    margin-left: auto;
+    margin-right: auto;
+}
