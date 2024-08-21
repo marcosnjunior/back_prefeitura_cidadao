@@ -26,7 +26,7 @@ label{
 }
 
 input, textarea{
-    width:100%;
+    width:99%;
     height: 40px;
     background-color: rgb(245, 245, 245);
     border-radius: 5px;
@@ -51,4 +51,66 @@ button[type="submit"] {
     font-size: 15px;
     cursor: pointer;
 }
+
+button:hover{
+    background-color: rgb(58, 58, 58);
+}
+
+.foto{
+    width: 500px;
+    height: 350px;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+
+}
+
+
+h4, h3{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+   
+}
+
+.upload{
+    width:99%;
+    height: 80px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    border-width: 0px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    border: 2px  dashed gray;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    
+}
+
+
+
+svg{
+    margin: 20px;
+}
+
+.up{
+    font-family: Helvetica, sans-serif;
+    font-size: larger;
+    margin: 1px;
+    color: rgb(19, 19, 19)
+}
+
+.arquivo{
+    font-family: Helvetica, sans-serif;
+    font-size: large;
+    margin: 1px;
+    color: rgb(122, 122, 122)
+}
+
+
+
+
 
