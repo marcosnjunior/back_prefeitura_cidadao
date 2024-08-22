@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conselho Tutelar Valentina</title>
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link rel="stylesheet" href="{% static 'formulario_conselho_tutelar.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        
+        <h5 class="servicos-conselho">Serviços</h5>
+       
+        <h4 class="tituto-conselho">Conselho Tutelar Valentina</h4>
+
+        <h5 class="frase">É um órgão permanente e autônomo, não
+            jurisdicional, encarregado pela sociedade de zelar
+            pelo cumprimento dos direitos da criança e do
+            adolescente definidos na <a href="https://www.planalto.gov.br/ccivil_03/leis/l8069.htm#:~:text=LEI%20N%C2%BA%208.069%2C%20DE%2013%20DE%20JULHO%20DE%201990.&text=Disp%C3%B5e%20sobre%20o%20Estatuto%20da,Adolescente%20e%20d%C3%A1%20outras%20provid%C3%AAncias.&text=Art.,%C3%A0%20crian%C3%A7a%20e%20ao%20adolescente.&text=Nos%20casos%20expressos%20em%20lei,e%20um%20anos%20de%20idade.">Lei de n° 8.069/90 - ECA</a>.</h5>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <h6>Informações</h6>
+
+            <label>
+                <h4>Descrição *</h4>
+                <textarea name="descricao" placeholder="Conteúdo" required></textarea>
+            </label>
+
+
+            <label>
+                <h4>Endereço do acontecimento *</h4>
+                <input type="text" name="endereco_aconteceu" id="endereco_aconteceu" placeholder="Endereço do acontecimento" required>
+            </label>
+
+
+            <button type="submit" value="">Solicitar</button>
+        </form>
+    </div>
+</body>
+
+</html>

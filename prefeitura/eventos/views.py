@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Cultura, Conselho_tutelar, Ptts_ouvidoria_maria_de_nazare, Familia_acolhedora
+from .models import Cultura, Funjope_Apoio_a_eventos_artisticos, Conselho_tutelar, Conselho_tutelar_cristo, Conselho_tutelar_mangabeira, Conselho_tutelar_norte, Conselho_tutelar_praia, Conselho_tutelar_sudeste, Conselho_tutelar_sul, Conselho_tutelar_valentina, Ptts_ouvidoria_maria_de_nazare, Familia_acolhedora
 from django.db.models import Q 
-
 
 
 def eventos(request):
@@ -21,9 +20,14 @@ def familia_acolhedora_(request):
 
     if request.method == "POST":
         
-    
+        data_nascimneto = request.POST.get('data_nascimneto')
+        print(data_nascimneto)
 
-    """
+        cpf = request.POST.get('cpf')
+        print(cpf)
+
+
+        """
         nome = request.POST.get('nome')
         idade = request.POST.get('idade')
         data_nascimneto = request.POST.get('data_nascimneto')
@@ -46,74 +50,117 @@ def familia_acolhedora_(request):
         renda = request.POST.get('renda')
         renda_aproximada = request.POST.get('renda_aproximada')
         residente = request.POST.get('residente')
-        bem_maior = request.POST.get('bem_maior')
+        mensagem = request.POST.get('mensagem')
 
-
-
-
-        
-
-        cadastro = Familia_acolhedora()
-        cadastro.feedback = feedback
-        cadastro.nome = nome
-        cadastro.cpf = cpf
-        cadastro.telefone = telefone
-        cadastro.save()
-
+        cadastro_familia = Familia_acolhedora()
+        cadastro_familia.nome = nome
+        cadastro_familia.idade = idade
+        cadastro_familia.data_nascimneto = data_nascimneto
+        cadastro_familia.cpf = cpf
+        cadastro_familia.rg = rg
+        cadastro_familia.endereco = endereco
+        cadastro_familia.numero_residencia = numero_residencia
+        cadastro_familia.cep = cep
+        cadastro_familia.ponto_referencia = ponto_referencia
+        cadastro_familia.bairro = bairro
+        cadastro_familia.cidade = cidade
+        cadastro_familia.uf = uf
+        cadastro_familia.complemento = complemento
+        cadastro_familia.telefone = telefone
+        cadastro_familia.celular = celular
+        cadastro_familia.email = email
+        cadastro_familia.sabendo_servico = sabendo_servico
+        cadastro_familia.preferencia_perfil = preferencia_perfil
+        cadastro_familia.genero_acolhimento = genero_acolhimento
+        cadastro_familia.renda = renda
+        cadastro_familia.renda_aproximada = renda_aproximada
+        cadastro_familia.residente = residente
+        cadastro_familia.mensagem = mensagem
+        cadastro_familia.save()
+""" 
         return redirect("/eventos/familia_acolhedora")
     
     else:
         return render(request, 'eventos/familia_acolhedora_.html', {})
-    """
-
-    
-    nome = 
-    idade = 
-    data_nascimneto = 
-    cpf = 
-    rg = 
-    endereco = 
-    numero_residencia = 
-    cep = 
-    ponto_referencia = 
-    bairro = 
-    cidade = 
-    uf = 
-    complemento = 
-    telefone = 
-    celular = 
-    email = 
-    sabendo_servico = 
-    preferencia_perfil = 
-    genero_acolhimento = 
-    renda = 
-    renda_aproximada = 
-    residente = 
-    bem_maior =
-    """
-
-    #return HttpResponse("chegou nas views -> familia_acolhedora")
-    return render(request, 'eventos/familia_acolhedora_.html', {})
-
-#resultado = Fornecedor.objects.all()
-    #return HttpResponse(resultado)
+   
 
 def cultura(request):
     return render(request, 'eventos/cultura.html', {})
 
+def funjope_Apoio_a_eventos_artisticos(request):
+    return render(request, 'eventos/funjope_Apoio_a_eventos_artisticos.html')
+
 def cultura_(request):
     return render(request, 'eventos/cultura_.html', {})
 
+######################################################################
 
 def conselho_tutelar(request):
     return render(request, 'eventos/conselho_tutelar.html', {})
 
-def conselho_tutelar_(request):
-    return render(request, 'eventos/conselho_tutelar_.html', {})
+def conselho_tutelar_cristo(request):
+    return render(request, 'eventos/conselho_tutelar_cristo.html', {})
+
+
+"""
+
+if request.method == "POST":
+        descricao_denuncia = request.POST.get('descricao_denuncia')
+        endereco_aconteceu = request.POST.get('endereco_aconteceu')
+        descricao = request.POST.get('descricao')
+        cadastro = Conselho_tutelar_cristo()
+        cadastro = descricao_denuncia
+        cadastro = endereco_aconteceu
+        cadastro = descricao
+        cadastro.save()
+
+        return redirect("/eventos/conselho_tutelar")
+    
+    else:
+        return render(request, 'eventos/conselho_tutelar_cristo.html', {})
+
+        
+if request.method == "POST":
+        descricao_denuncia = request.POST.get('descricao_denuncia')
+        endereco_aconteceu = request.POST.get('endereco_aconteceu')
+        descricao = request.POST.get('descricao')
+        Conselho_tutelar_cristo.objects.create(descricao_denuncia=descricao_denuncia)
+        Conselho_tutelar_cristo.objects.create(endereco_aconteceu=endereco_aconteceu)
+        Conselho_tutelar_cristo.objects.create(descricao=descricao)
+
+        return redirect("/eventos/conselho_tutelar")
+    
+    else:
+        return render(request, 'eventos/conselho_tutelar_cristo.html', {})
+"""
+
+
+def conselho_tutelar_mangabeira(request):
+    return render(request, 'eventos/conselho_tutelar_mangabeira.html', {})
+
+def conselho_tutelar_norte(request):
+    return render(request, 'eventos/conselho_tutelar_norte.html', {})
+
+def conselho_tutelar_praia(request):
+    return render(request, 'eventos/conselho_tutelar_praia.html', {})
+
+def conselho_tutelar_sudeste(request):
+    return render(request, 'eventos/conselho_tutelar_sudeste.html', {})
+
+def conselho_tutelar_sul(request):
+    return render(request, 'eventos/conselho_tutelar_sul.html', {})
+
+def conselho_tutelar_valentina(request):
+    return render(request, 'eventos/conselho_tutelar_valentina.html', {})
+
+def conselho_tutelar_denuncia(request):
+    return render(request, 'eventos/conselho_tutelar_denuncia.html', {})
+
+
+#######################################################################################
 
 def ptts_ouvidoria_maria_de_nazare(request):
     return render(request, 'eventos/ptts_ouvidoria_maria_de_nazare.html', {})
-
 
 
 def maria_de_nazare(request):
