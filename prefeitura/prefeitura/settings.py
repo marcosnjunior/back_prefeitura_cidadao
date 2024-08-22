@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "home",
     "esporte",
     "educacao",
+    "zeladoria",
     "animais",
     "saude",
 ]
