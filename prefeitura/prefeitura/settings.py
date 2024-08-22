@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     "esporte",
     "educacao",
     "zeladoria",
+    "animais",
+    "saude",
 ]
 
 MIDDLEWARE = [
