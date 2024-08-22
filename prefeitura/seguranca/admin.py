@@ -1,0 +1,15 @@
+from django.contrib import admin
+from .models import Palestras_Para_Instituicoes_De_Ensino, Registro_De_Ocorrencia_De_Desastre, Solicitacao_De_Visitorias_Preventivas, Alagamento, Desmoronamento, Secretaria_De_Seguranca_Urbana_Cidadania, Solicitacao_De_Guarnicao_Para_Evento, Solicitacao_De_Rondas_Da_Guarda_Municipal, Teatro_De_Fantoches, Denuncie_aqui
+
+# Register your models here.
+
+admin.site.register(Palestras_Para_Instituicoes_De_Ensino)
+admin.site.register(Registro_De_Ocorrencia_De_Desastre)
+admin.site.register(Solicitacao_De_Visitorias_Preventivas)
+admin.site.register(Alagamento)
+admin.site.register(Desmoronamento)
+admin.site.register(Secretaria_De_Seguranca_Urbana_Cidadania)
+admin.site.register(Solicitacao_De_Guarnicao_Para_Evento)
+admin.site.register(Solicitacao_De_Rondas_Da_Guarda_Municipal)
+admin.site.register(Teatro_De_Fantoches)
+admin.site.register(Denuncie_aqui)

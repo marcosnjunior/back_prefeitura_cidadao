@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'seguranca/global.css' %}">
+    <link rel="stylesheet" href="{% static 'seguranca/formulario.css' %}">
+</head>
+<body>
+    <div class="container">
+        {% include 'header.html' %}
+        <h3>Ligue Para Nós</h3>
+        <img src="{% static 'img/guardas.jpeg' %}" alt="Uma imagem de exemplo" width="100%" >
+        <p>Precisa de contato direto? Toque para visualizar nosso endereço ou ligue para nós com um clique. Acessibilidade com um clique</p>
+        <h4 style="margin-bottom: 0px;">Locais</h4>
+
+        <div class="caixa_locais">
+            <h3 style="margin-bottom: -10px;">Base da Guarda Civil Metropolitana de...</h3>
+            <p class="contato1">Telefone: <a href="" style="color: rgb(82, 151, 255);">153</a></p>
+            <p class="contato1">Area de Cobertura</p>
+            <p class="contato2">João Pessoa</p>
+            <p class="contato1">Endereço</p>
+            <p class="contato2" style="margin-bottom: 0px;">Avenida Almirante Barroso, 668 - Centro João Pessoa - PB</p>
+            <a href="https://maps.app.goo.gl/nGr9bXuM933vkUG99" style="color: rgb(82, 151, 255);">Ver Local</a>
+        </div>
+    </div>
+</body>
+</html>
