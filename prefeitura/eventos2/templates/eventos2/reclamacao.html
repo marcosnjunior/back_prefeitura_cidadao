@@ -1,116 +1,121 @@
+
 {% load static %}
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'formulario.css' %}">
-    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link rel="stylesheet" href="{% static 'formulario-eventos2.css' %}">
+    <link rel="stylesheet" href="{% static 'global-eventos2.css' %}">
 </head>
-<body>
+<body> 
+    
     <div class="container">
+        <form action="" method="POST">
+            {% csrf_token %}
        
-            <form action="/eventos2/reclamacao" method="POST">
-
-                {% csrf_token %}
-
-                
-                <div class="text-form">
-                    <label for="nome">Nome:</label>
-                    <br>
-                    <input required type="text" name="nome" id="nome">
-                    
-                    <br>
-                
-                    <label for="cpf">CPF:</label>
-                    <br>
-                    <input required type="text" name="cpf" id="cpf">
-                    
-                    <br>
-                
-                    <label for="sexo">Sexo:</label>
-                    <br>
-                    <input required type="text" name="sexo" id="sexo">
-                    
-                    <br>
-
-                    <label for="cep">Cep:</label>
-                    <br>
-                    <input required type="text" name="cep" id="cep">
-                    
-                    <br>
-
-                    <label for="rua">Rua:</label>
-                    <br>
-                    <input required type="text" name="rua" id="rua">
-                    
-                    <br>
-
-                    <label for="bairro">Bairro:</label>
-                    <br>
-                    <input required type="text" name="bairro" id="bairro">
-                    
-                    <br>
-
-                    <label for="cidade">Cidade:</label>
-                    <br>
-                    <input required type="text" name="cidade" id="cidade">
-                    
-                    <br>
-
-                    <label for="telefone-whatsapp">Telefone/Whatsapp:</label>
-                    <br>
-                    <input required type="text" name="telefone-whatsapp" id="telefone-whatsapp">
-                    
-                    <br>
-
-                    <label for="email">E-mail:</label>
-                    <br>
-                    <input required type="text" name="email" id="email">
-                    
-                    <br>
-
-                    <label for="razao_social">Razão Social (fornecedor):</label>
-                    <br>
-                    <input required type="text" name="razao_social" id="razao_social">
-                    
-                    <br>
-
-                    <label for="telefone_fornecedor">Telefone (fornecedor):</label>
-                    <br>
-                    <input required type="text" name="telefone_fornecedor" id="telefone_fornecedor">
-                    
-                    <br>
-
-                    <label for="nome_fts_fncd ">Nome fantasia (fornecedor):</label>
-                    <br>
-                    <input required type="text" name="nome_fts_fncd " id="nome_fts_fncd ">
-                    
-                    <br>
-
-                    <label for="endereco_fornecedor">Endereco (fornecedor):</label>
-                    <br>
-                    <input required type="text" name="endereco_fornecedor" id="endereco_fornecedor">
-                    
-                    <br>
-
-                    <label for="descricao">Descrição:</label>
-                    <br>
-                    <input required type="text" name="descricao" id="descricao">
-                    
-                    <br>
-                </div>
+        <form action="/eventos2/reclamacao" method="POST">
+    
+            {% csrf_token %}
+    
             
-                <button type="submit">Solicitar</button>
-                    
-                    </form>
-
+            <div class="text-form">
+                <label for="nome">Nome:</label>
+                <br>
+                <input required class="input" type="text" name="nome" id="nome">
                 
-            </form>
+                <br>
+            
+                <label for="cpf">CPF:</label>
+                <br>
+                <input required type="text" name="cpf" id="cpf">
+                
+                <br>
+            
+                <label for="sexo">Sexo:</label>
+                <br>
+                <input required type="text" name="sexo" id="sexo">
+                
+                <br>
+    
+                <label for="cep">Cep:</label>
+                <br>
+                <input required type="text" name="cep" id="cep">
+                
+                <br>
+    
+                <label for="rua">Rua:</label>
+                <br>
+                <input required type="text" name="rua" id="rua">
+                
+                <br>
+    
+                <label for="bairro">Bairro:</label>
+                <br>
+                <input required type="text" name="bairro" id="bairro">
+                
+                <br>
+    
+                <label for="cidade">Cidade:</label>
+                <br>
+                <input required type="text" name="cidade" id="cidade">
+                
+                <br>
+    
+                <label for="telefone-whatsapp">Telefone/Whatsapp:</label>
+                <br>
+                <input required type="text" name="telefone-whatsapp" id="telefone-whatsapp">
+                
+                <br>
+    
+                <label for="email">E-mail:</label>
+                <br>
+                <input required type="text" name="email" id="email">
+                
+                <br>
+    
+                <label for="razao_social">Razão Social (fornecedor):</label>
+                <br>
+                <input required type="text" name="razao_social" id="razao_social">
+                
+                <br>
+    
+                <label for="telefone_fornecedor">Telefone (fornecedor):</label>
+                <br>
+                <input required type="text" name="telefone_fornecedor" id="telefone_fornecedor">
+                
+                <br>
+    
+                <label for="nome_fts_fncd ">Nome fantasia (fornecedor):</label>
+                <br>
+                <input required type="text" name="nome_fts_fncd " id="nome_fts_fncd ">
+                
+                <br>
+    
+                <label for="endereco_fornecedor">Endereco (fornecedor):</label>
+                <br>
+                <input required type="text" name="endereco_fornecedor" id="endereco_fornecedor">
+                
+                <br>
+    
+                <label for="descricao">Descrição:</label>
+                <br>
+                <input required type="text" name="descricao" id="descricao">
+                
+                <br>
+            </div>
+        
+            <button type="submit">Solicitar</button>
+                
+                </form>
+    
             
         </form>
+        
+    </form>
     </div>
+
 </body>
 </html>

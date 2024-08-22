@@ -6,13 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PaoLeite</title>
-    <link rel="stylesheet" href="{% static 'global.css' %}">
-    <link rel="stylesheet" href="{% static 'formulario.css' %}">
+    <link rel="stylesheet" href="{% static 'global-eventos2.css' %}">
+    <link rel="stylesheet" href="{% static 'formulario-eventos2.css' %}">
 </head>
 <body>
     
     <div class="container">
-        <form action="" method="post">
+        <form action="" method="POST">
             {% csrf_token %}
             
             <form action="/eventos2/paoleite" method="POST">
@@ -79,15 +79,10 @@
                     
                     <br>
                     
-                    <label for="numeroNis">Estado Civil:</label>
-                    <br>
-                    <input required type="text" name="numeroNis" id="numeroNis">
-                    
-                    <br>
 
                     <label for="numeroNis">Número do NIS:</label>
                     <br>
-                    <input required type="text" name="estadoCivil" id="estadoCivil">
+                    <input required type="text" name="numeroNis" id="numeroNis">
                     
                     <br>
 
@@ -97,7 +92,7 @@
                     
                     <br>
 
-                    <label for="possuiCartaoAlimentacao">Possui cartão alimentação?:</label>
+                    <label for="possuiCartaoAlimentacao">Possui cartão alimentação?</label>
                     <br>
                     <input required type="text" name="possuiCartaoAlimentacao" id="possuiCartaoAlimentacao">
                     

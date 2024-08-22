@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Duvida, Reclamacao, Denuncia, PaoLeite, EmissaoBoleto
 
-#PROCON
+#PROCON.
 def procon(request):
   print("entrou no procon")
   return render(request, 'eventos2/procon.html', {})
@@ -9,6 +9,7 @@ def procon(request):
 def duvida(request):
   if request.method == "POST":
     nome = request.POST.get('nome')
+    print(nome)
     cpf = request.POST.get('cpf')
     sexo = request.POST.get('sexo')
     cep = request.POST.get('cep')
@@ -23,10 +24,12 @@ def duvida(request):
     endereco_fornecedor = request.POST.get('endereco_fornecedor')
     descricao = request.POST.get('descricao')
 
+    
     form_duvida = Duvida()
+    form_duvida.nome = nome
     form_duvida.save()
 
-    return redirect(request, '/procon')
+    return redirect('procon')
   else:
     return render(request, 'eventos2/duvida.html')
 
@@ -81,6 +84,9 @@ def denuncia(request):
 
 #PAO E LEITE
 def paoleite(request):
+  return render(request, 'eventos2/pao-leite.html')
+
+def formpaoleite(request):
   if request.method == "POST":
     nome = request.POST.get('nome')
     dataNascimento = request.POST.get('dataNascimento')
@@ -100,12 +106,9 @@ def paoleite(request):
     form_paoleite = PaoLeite()
     form_paoleite.save()
 
-    return redirect(request, '/procon')
+    return redirect(request, '/paoleite')
   else:
-    return render(request, 'eventos2/pao-leite.html')
-
-def formpaoleite(request):
-  return render(request, 'eventos2/form-pao-leite.html')
+    return render(request, 'eventos2/form-pao-leite.html')
 
 def cras(request):
   print("entrou no cras")
