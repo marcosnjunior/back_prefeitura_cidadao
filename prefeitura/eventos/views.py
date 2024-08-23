@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Cultura, Funjope_Apoio_a_eventos_artisticos, Conselho_tutelar, Conselho_tutelar_cristo, Conselho_tutelar_mangabeira, Conselho_tutelar_norte, Conselho_tutelar_praia, Conselho_tutelar_sudeste, Conselho_tutelar_sul, Conselho_tutelar_valentina, Ptts_ouvidoria_maria_de_nazare, Familia_acolhedora
+from .models import Cultura, Funjope_Apoio_a_eventos_artisticos, Funjope_atestado_da_condicao_de_artista_local, Funjope_cadastramento_de_artistas_e_outros, Funjope_concertos_de_orquestra_sinfonica, Funjope_exposicao_de_artes_visuais, Funjope_edital_de_ocupacao_do_casa_da_polvora, Funjope_edital_de_ocupacao_do_casarao_34, Funjope_edital_de_ocupacao_do_hotel_globo, Funjope_instalacao_de_obras_de_arte, Funjope_jp_cultura, Funjope_jp_film_commission, Funjope_lei_dos_edificios, Funjope_prestacao_de_contas, Funjope_projeto_acao_social_pela_musica, Funjope_solicitacao_de_pagamento, Conselho_tutelar, Conselho_tutelar_cristo, Conselho_tutelar_mangabeira, Conselho_tutelar_norte, Conselho_tutelar_praia, Conselho_tutelar_sudeste, Conselho_tutelar_sul, Conselho_tutelar_valentina, Ptts_ouvidoria_maria_de_nazare, Familia_acolhedora, Familia_acolhedora_forms
 from django.db.models import Q 
 
 
@@ -16,11 +16,11 @@ def familia_acolhedora(request):
     return render(request, 'eventos/familia_acolhedora.html', {})
 
 
-def familia_acolhedora_(request):
+def familia_acolhedora_forms(request):
 
     if request.method == "POST":
         
-        data_nascimneto = request.POST.get('data_nascimneto')
+        data_nascimneto = request.POST.get('data_nascimento')
         print(data_nascimneto)
 
         cpf = request.POST.get('cpf')
@@ -30,7 +30,7 @@ def familia_acolhedora_(request):
         """
         nome = request.POST.get('nome')
         idade = request.POST.get('idade')
-        data_nascimneto = request.POST.get('data_nascimneto')
+        data_nascimento = request.POST.get('data_nascimento')
         cpf = request.POST.get('cpf')
         rg = request.POST.get('rg')
         endereco = request.POST.get('endereco')
@@ -52,10 +52,10 @@ def familia_acolhedora_(request):
         residente = request.POST.get('residente')
         mensagem = request.POST.get('mensagem')
 
-        cadastro_familia = Familia_acolhedora()
+        cadastro_familia = Familia_acolhedora_forms()
         cadastro_familia.nome = nome
         cadastro_familia.idade = idade
-        cadastro_familia.data_nascimneto = data_nascimneto
+        cadastro_familia.data_nascimento = data_nascimento
         cadastro_familia.cpf = cpf
         cadastro_familia.rg = rg
         cadastro_familia.endereco = endereco
@@ -87,11 +87,224 @@ def familia_acolhedora_(request):
 def cultura(request):
     return render(request, 'eventos/cultura.html', {})
 
-def funjope_Apoio_a_eventos_artisticos(request):
-    return render(request, 'eventos/funjope_Apoio_a_eventos_artisticos.html')
 
-def cultura_(request):
-    return render(request, 'eventos/cultura_.html', {})
+def funjope_Apoio_a_eventos_artisticos(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_Apoio_a_eventos_artisticos()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_Apoio_a_eventos_artisticos.html')
+
+    
+def funjope_atestado_da_condicao_de_artista_local(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_atestado_da_condicao_de_artista_local()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_atestado_da_condicao_de_artista_local.html')
+    
+
+def funjope_cadastramento_de_artistas_e_outros(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_cadastramento_de_artistas_e_outros()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_cadastramento_de_artistas_e_outros.html')
+
+
+def funjope_concertos_de_orquestra_sinfonica(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_concertos_de_orquestra_sinfonica()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_concertos_de_orquestra_sinfonica.html')
+
+
+def funjope_exposicao_de_artes_visuais(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_exposicao_de_artes_visuais()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_exposicao_de_artes_visuais.html')
+    
+
+def funjope_edital_de_ocupacao_do_casa_da_polvora(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_edital_de_ocupacao_do_casa_da_polvora()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_edital_de_ocupacao_do_casa_da_polvora.html')
+    
+
+def funjope_edital_de_ocupacao_do_casarao_34(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_edital_de_ocupacao_do_casarao_34()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_edital_de_ocupacao_do_casarao_34.html')
+    
+
+def funjope_edital_de_ocupacao_do_hotel_globo(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_edital_de_ocupacao_do_hotel_globo()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_edital_de_ocupacao_do_hotel_globo.html')
+    
+
+def funjope_instalacao_de_obras_de_arte(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_instalacao_de_obras_de_arte()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_instalacao_de_obras_de_arte.html')
+    
+
+def funjope_jp_cultura(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_jp_cultura()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_jp_cultura.html')
+
+
+def funjope_jp_film_commission(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_jp_film_commission()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_jp_film_commission.html')
+    
+
+def funjope_lei_dos_edificios(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_lei_dos_edificios()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_lei_dos_edificios.html')
+    
+
+def funjope_prestacao_de_contas(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_prestacao_de_contas()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_prestacao_de_contas.html')
+    
+
+def funjope_projeto_acao_social_pela_musica(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_projeto_acao_social_pela_musica()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_projeto_acao_social_pela_musica.html')
+    
+
+def funjope_solicitacao_de_pagamento(request):
+
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        salvar = Funjope_solicitacao_de_pagamento()
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/cultura")
+    
+    else:
+        return render(request, 'eventos/funjope_solicitacao_de_pagamento.html')
+    
+
+def premio_joao_balula(request):
+    return render(request, 'eventos/premio_joao_balula.html')
+
+def edital_de_formento(request):
+    return render(request, 'eventos/edital_de_formento.html')
+
+
 
 ######################################################################
 
