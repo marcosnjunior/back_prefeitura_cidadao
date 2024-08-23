@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Previdência</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .previdencia-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .service-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #1e90ff;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .main-button {
+            width: auto; /* Altera o tamanho para ajustar ao conteúdo */
+            margin-bottom: 20px;
+            margin-left: 0; /* Remove a margem automática à esquerda */
+            text-align: left; /* Alinha o texto à esquerda */
+        }
+
+        .services-available h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .grid-container .service-button {
+            font-size: 16px;
+            padding: 20px;
+        }
+        a{
+            text-decoration:none;
+        }
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="back-button" onclick="goBack()">&#8592;</button>
+            <style>
+                p {
+                   text-align: center;
+                }
+
+
+           </style>
+            </header>
+
+            <h1><p>Serviços</p></h1>
+
+
+        <section class="previdencia-section">
+            <div class="icon">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9f/b2/77/9fb2773c-a65d-c3eb-0264-211c1c8ec8d8/uruguayAppIcon-1x_U007emarketing-0-7-0-85-220.png/230x0w.webp" alt="Ícone Previdência">
+            </div>
+            <h2>Previdência</h2>
+        </section>
+
+        <button class="service-button main-button">Serviços</button>
+
+        <section class="services-available">
+            <h3>Serviços disponíveis</h3>
+            <div class="grid-container">
+                <a href="https://www.joaopessoa.pb.gov.br/pc/integracao/emissaoGuiaTransmissaoItbi.xhtml">    <button class="service-button">ITBI</button></a>
+                <a href="https://www.joaopessoa.pb.gov.br/pc/integracao/emissao2ViaTcr.xhtml?faces-redirect=true"> <button class="service-button">TCR</button></a>
+               <a href="https://www.joaopessoa.pb.gov.br/pc/integracao/emissao2ViaIptu.xhtml;jsessionid=D780XKXYKKLtQnDgAeGx0D1yWIvI-yhq5ZxxHivp.seremonline?faces-redirect=true
+"> <button class="service-button">IPTU</button></a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
