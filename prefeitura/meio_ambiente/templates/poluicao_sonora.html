@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'forms.css' %}">
+    <title>Poluição Sonora</title>
+</head>
+<body>
+    <div class="corpo">
+        <div class="titulo">
+            <p class="titulo">Serviços</p>
+        </div>
+        <h2>Poluição Sonora</h2>
+
+        <p>
+            Serviço de Controle de Barulho Excessivo: A Secretaria <br>
+            da SEMAM da Prefeitura de João Pessoa trabalha para <br>
+            combater o barulho alto e incômodo que perturba o <br>
+            sossego da cidade. Nossos especialistas atuam para <br>
+            fiscalizar e evitar a poluição sonora, garantindo um <br>
+            ambiente tranquilo para todos. Se você se deparar com <br>
+            barulhos excessivos, denuncie para que possamos <br>
+            tomar medidas corretivas. Juntos, podemos preservar a <br>
+            paz e o bem-estar de nossa cidade.
+        </p>
+        <form action="" method="post">
+            {{form}}
+            {% csrf_token %}
+            <button type="submit">Solicitar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema na Iluminação</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Problema na Iluminação</h1>
+    <p>Resolva seus problemas de iluminação com facilidade!.<br>
+       O serviço da prefeitura ajuda a solucionar questões de iluminação.</p>
+    <br>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Solicitar">
+    </form>
+</body>
+</html>

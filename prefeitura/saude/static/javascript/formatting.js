@@ -1,9 +1,17 @@
 const tel = document.querySelector('input[name="telefone"]');
-tel.addEventListener('keypress', (e) => mascaraTelefone(e.target.value))
-tel.addEventListener('change', (e) => mascaraTelefone(e.target.value))
-const mascaraTelefone = (value) => {
-    let newValue = value.replace(/\D/g, '');
-    newValue = newValue.replace(/^(\d{2})(\d)/g, '($1) $2');
-    newValue = newValue.replace(/(\d)(\d{4})$/, '$1-$2');
-    tel.value = newValue;
-}
+
+
+tel.addEventListener('input', (e) => {
+    e.target.value = formatacaoCelular(e.target.value);
+});
+
+const formatacaoCelular = (phoneNumber) => {
+    const cleanedPhoneNumber = phoneNumber.replace(/\D/g, '');
+    const match = cleanedPhoneNumber.match(/^(\d{2})(\d{4})(\d{4})$/);
+    
+    if (match) {
+        return `(${match[1]}) ${match[2]}-${match[3]}`;
+    }
+    
+    return cleanedPhoneNumber;
+};

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão SUS</title>
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    <link rel="stylesheet" href="{% static 'css/saude.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- {% include 'navbar.html' %} -->
+        <div class="icone">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>bottle-tonic-plus</title>
+                <path
+                    d="M13 4H11L10 2H14L13 4M14 8V6H15V5H9V6H10V8C7.24 8 5 10.24 5 13V22H19V13C19 10.24 16.76 8 14 8M16 17H13V20H11V17H8V15H11V12H13V15H16V17Z" />
+            </svg>
+        </div>
+
+        <h4 class="titulo-categoria">Cartão do SUS</h4>
+
+        <div class="botao-servicos">Serviços</div>
+
+        <h5 class="titulo-servicos">Serviços disponíveis</h5>
+
+        <div class="servicos">
+            <a class="servico" href="/saude/cartao-sus/solicite-cartao-sus">
+                Solicite aqui seu cartão SUS 
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

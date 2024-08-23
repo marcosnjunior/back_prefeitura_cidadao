@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'seguranca/global.css' %}">
+    <link rel="stylesheet" href="{% static 'seguranca/formulario.css' %}">
+</head>
+<body>
+    <div class="container">
+        {% include 'header.html' %}
+        <h3></h3>
+        <h6>Informações</h6>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="">Telefone do Responsavel *</label>
+            <textarea name="telefone_responsavel" id="telefone_responsavel" class="teatro_and_denuncie" required></textarea>
+            
+            <label for="">Inserir Email *</label>
+            <textarea name="inserir_email" id="inserir_email" class="teatro_and_denuncie" required></textarea>
+
+            <label for="">Local Da Apresentação *</label>
+            <textarea name="local_apresentacao" id="local_apresentacao" class="teatro_and_denuncie" required></textarea>
+
+            <label for="">Insira O CEP *</label>
+            <textarea name="inserir_cep" id="inserir_cep" class="teatro_and_denuncie" required></textarea>
+
+            <label for="">Bairro *</label>
+            <textarea name="bairro" id="bairro" class="teatro_and_denuncie" required></textarea>
+
+            <label for="">Inserir A Rua *</label>
+            <textarea name="inserir_rua" id="inserir_rua" class="teatro_and_denuncie" required></textarea>
+
+            <label for="">Ponto de Referência *</label>
+            <textarea name="ponto_referencia" id="ponto_referencia" class="teatro_and_denuncie" required></textarea>
+            
+            <label for="">Público Estimado (Quantidade): *</label>
+            <textarea name="publico_estimado" id="publico_estimado" class="teatro_and_denuncie" required></textarea>
+
+            <label for="">Tema da Apresentação: *</label>
+            <textarea name="tema_apresentacao" id="tema_apresentacao" class="teatro_and_denuncie" required></textarea>
+
+            <label for=""class="label_negrito">Possui Microfone? *</label>
+            <select name="microfone" id="microfone">
+                <option value="SIM">Sim</option>
+                <option value="NÃO">Não</option>
+            </select>
+
+            <label for="" class="label_negrito">Possui Caixa de Som? *</label>
+            <select name="caixa_de_som" id="caixa_de_som">
+                <option value="SIM">Sim</option>
+                <option value="NÃO">Não</option>
+            </select>
+
+            <input type="submit" value="Solicitar" class="botao">
+        </form>
+
+    </div>
+</body>
+</html>
