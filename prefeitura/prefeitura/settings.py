@@ -41,6 +41,14 @@ INSTALLED_APPS = [
     "esporte",
     "educacao",
     "licenciamento_2",
+    "meio_ambiente",
+    "zeladoria",
+    "animais",
+    "saude",
+    "eventos2",
+    "licenciamento",
+    "infraestrutura",
+    "seguranca",
 ]
 
 MIDDLEWARE = [

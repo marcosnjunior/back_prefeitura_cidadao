@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'forms.css' %}">
+    <title>Plantio de Arvores</title>
+</head>
+<body>
+    <div class="corpo">
+        <div class="titulo">
+            <p class="titulo">Serviços</p>
+        </div>
+        <h2>Plantio de Árvores</h2>
+        <img class="foto" src="{% static 'prefeituraConectada.png' %}" alt="era pra ser uma imagem">
+        
+        <div>
+            <p>
+                A Prefeitura de João Pessoa oferece um serviço de <br>
+                plantio de árvores, tornando a cidade mais verde e <br>
+                saudável. Contribua para o meio ambiente e solicite já <br>
+                o plantio em espaços urbanos. Juntos, cuidamos do <br>
+                futuro!
+            </p>
+
+          
+        </div>
+        <h4>Foto do Local *</h4>
+        <div class="upload">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368">
+                <path d="M440-320v-326L336-542l-56-58 200-200 200 200-56 58-104-104v326h-80ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/>
+            </svg>
+
+            <div class="fake">
+                <h4 class="up">Upload</h4>
+                <h5 class="arquivo">Por favor, faça o upload do arquivo solici...</h5>
+            </div>
+            
+        </div>
+        
+        <form action="" method="post">
+            {{form}}
+            {% csrf_token %}
+            <button type="submit">Solicitar</button>
+        </form>
+    </div>
+</body>
+</html>
