@@ -27,7 +27,7 @@ def poda(request):
         if form.is_valid():
             form.save()
             form.clean()
-            return redirect('/meio_ambiente/poda_de_arvores')
+            return redirect('/meio_ambiente/autorizacao_arborea')
     else:
         form = Poda_de_ArvoresForm()
     return render(request, 'poda_de_arvores.html', {'form': form})
@@ -43,7 +43,7 @@ def lancamento(request):
         if form.is_valid():
             form.save()
             form.clean()
-            return redirect('/meio_ambiente/lancamento_de_agua_servidas')
+            return redirect('/meio_ambiente/denuncia_ambiental')
     else:
         form = lancamento_de_agua_servidasForm()
         print("Chegou aqui")
