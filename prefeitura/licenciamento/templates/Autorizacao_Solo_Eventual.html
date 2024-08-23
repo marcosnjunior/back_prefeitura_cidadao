@@ -1,0 +1,92 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="{%static 'SEDURB - Autorização Uso de Solo - Comercial.css'%}">
+</head>
+<body>
+    <div class="Principal">
+        <h1> SEDURB - Atualização Cadastral Quiosques e Similares 2024</h1>
+        <sub><strong>PROCESSAMENTO DE RECADASTRAMENTO</strong></sub>
+
+        <div class="lista_numeros"> <br>
+            <b style="float: left;">1. </b> <div> Caberá à SECRETÀRIA DE DESENVOLVIMENTO URBANO - SEDURB, através da Divisão de Controle ... </div> <br>
+            <b style="float: left;">2. </b> <div> No recadastramento ... </div> <br>
+            <b style="float: left;">3. </b> <div> Aos interessados ... </div> <br>
+            <b style="float: left;">4. </b> <div> O interessado ... </div> <br>
+
+            <div> a) RG e CPF </div> <br>
+            <div> b) Comprovante atual </div> <br>
+            <div> c) Último Alvará </div> <br>
+            <div> d) Certidão Negativa de Débitos Municipais </div> <br>
+
+        </div>
+            <form action="" method="post"><br>
+                {% csrf_token %}
+                <label for=""style="font-size: 13px;"><center><b>FICHA RECADASTRAMENTO DE OCUPAÇÕES DE ÁREA PÚLICA </b></center> <br>
+                <input type="text" name="caixa1" id=""><br><br>
+
+                <label for="">Nome *</label><br>
+                <input type="text" name="Nome" id="" required><br>
+
+                <label for=""> CPF* </label><br>
+                <input type="number" name="CPF" id="" required><br><br>
+
+                <label for="">Telefone de Contato *</label><br>
+                <input type="number" name="Telefone" id="" required><br><br>
+
+                <label for="">E-mail</label><br>
+                <input type="email" name="Email" id="" required><br><br>
+
+                <label for="">Endereço Residêncial</label><br>
+                <input type="text" name="Endereco_1" id=""><br> <br>
+                <input type="text" name="Endereco_2" id=""><br><br>
+
+                <label for="">Logradouro *</label><br>
+                <input type="text" name="Logradouro" id=""><br><br>
+
+                <label for="">Bairro *</label><br>
+                <input type="text" name="Bairro" id=""><br><br>
+
+                <label for="">Tipo equipamento (Box, Quiosque, Barraca, Fiteiro e etc)</label><br>
+                <input type="text" name="Tipo_Equipamento" id=""><br><br>
+
+                <label for="">Nº do Box /Quiosque/Barraca/Fiteiro</label><br>
+                <input type="number" name="Numero_Box" id=""><br><br>
+
+                <label for="">Quadra / Ilha *</label><br>
+                <input type="text" name="Quadra_ou_ilha" id=""><br><br>
+
+                <label for="">Tipo de Contrução *</label><br>
+                <input type="text" name="Tipo_Construcao" id=""><br><br>
+
+                <label for="">Área Ocupada (m²) * </label><br>
+                <input type="text" name="Area_Ocupada" id=""><br><br>
+
+                <label for="">Tempo que ocupa o Local *</label><br>
+                <input type="text" name="Tempo_Ocupa" id=""><br><br>
+
+                <label for=""> Validade da última Permissã/Autorização *</label><br>
+                <input type="text" name="Validade_Permissao" id=""><br><br>
+
+                <label for="">Estrutura Utilizada (Mesas, cadeira, churrasquira entre outros) *</label><br>
+                <input type="text" name="Estrutura_Utilizada" id=""><br><br>
+
+                <label for="">Atividade Econômica (lanches, Bebidas, Restaurantes entre outros) *</label><br>
+                <input type="text" name="Atividade_Economica" id=""><br><br>
+
+                <label for="">Infor_1</label><br>
+                <input type="text" name="Infor" id=""><br><br>
+
+                <label for=""style="font-size: 13px;"><b> Informações </b><br><br>
+                <label for="">Descrição *</label><br>
+                <textarea name="Descricao" id="" cols="30" placeholder="Conteúdo" required></textarea><br><br>
+                <input type="submit" value="Solicitar">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
