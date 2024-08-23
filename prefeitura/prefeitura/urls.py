@@ -25,6 +25,7 @@ urlpatterns = [
     path("saude/", include("saude.urls")),
     path("", include("home.urls")),
     path("esporte/", include("esporte.urls")),
+    path("infraestrutura/", include("infraestrutura.urls")),
     path("educacao/", include("educacao.urls")),
     path("meio_ambiente/", include("meio_ambiente.urls")),
     path("zeladoria/", include("zeladoria.urls")),

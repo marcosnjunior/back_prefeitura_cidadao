@@ -1,0 +1,144 @@
+
+body{
+    margin: auto;
+    width: 500px;
+    height: 400px;
+}
+
+
+.simbolo_img{
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+input, textarea{
+    width:99%;
+    height: 40px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    border-width: 0px;
+    margin: 5px;
+    margin-left: 0px;
+
+}
+
+textarea{
+    height: 80px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: 0;
+    margin-top: 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.titulo{
+    color: black;
+    font-family: sans-serif;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.corpo{
+    margin: auto;
+    width: 500px;
+    height: 400px;
+    /* background-color: blueviolet; */
+    text-align: center;
+}
+
+svg{
+    width: 30px;
+    height: 30px;
+    fill: cornsilk;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.simbolo{
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    background-color: #72C075;
+}
+
+.class_servicos{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 120px;
+    background-color: #72C075;
+}
+
+.servicos{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.disponiveis{
+    /* background-color: tomato; */
+    text-align: justify;
+}
+
+.disponiveis2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 12px;
+}
+
+.servicos{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+
+}
+
+.bloco{
+    background-color: orange;
+    border-radius: 3px;
+    width: 240px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 7px;
+
+}
+
+.bloco:hover{
+    background-color: rgb(248, 168, 72);
+}
+.servico{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-left: 5px;
+    font-size: 20px;
+}
