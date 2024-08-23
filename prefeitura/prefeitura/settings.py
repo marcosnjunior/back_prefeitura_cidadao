@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "home",
     "esporte",
     "educacao",
+    "licenciamento_2",
     "eventos",
     "meio_ambiente",
     "zeladoria",
