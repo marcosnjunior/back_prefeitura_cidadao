@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     "home",
     "esporte",
     "educacao",
-    "licenciamento",
+    "licenciamento_2",
 ]
 
 MIDDLEWARE = [
