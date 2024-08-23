@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import SEDRUB, Autorizacao_Uso_de_Solo_Eventual, Atualizacao_Cadatral_Dos_Quiosques
+from .models import SEDRUB_Autorizacao_Uso_Solo_Comercial, Autorizacao_Uso_de_Solo_Eventual, Atualizacao_Cadatral_Dos_Quiosques
 
 def Imposto_e_Certidoes(request): # VIEW PARA CARREGAR A PAGINA
     # return HttpResponse('<h1>Hello HttpResponse</h1>')
@@ -59,7 +59,7 @@ def Autorizacao_Solo_Eventual(request): # FORMULARIO QUIOSQUES
 
 def SEDURB_Autorizacao(request):
     if request.method == 'POST': 
-        Formulario_SEDRUB = SEDRUB()
+        Formulario_SEDRUB = SEDRUB_Autorizacao_Uso_Solo_Comercial()
         Formulario_SEDRUB.Descricao = request.POST.get('Descricao')
         Formulario_SEDRUB.Requerente = request.POST.get('Requerente')
         Formulario_SEDRUB.CPF = request.POST.get('CPF')

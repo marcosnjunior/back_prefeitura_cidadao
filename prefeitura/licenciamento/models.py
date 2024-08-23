@@ -1,6 +1,6 @@
 from django.db import models
 
-class SEDRUB(models.Model): # ATUALIZACAO
+class SEDRUB_Autorizacao_Uso_Solo_Comercial(models.Model): # ATUALIZACAO
     Descricao = models.TextField(default='Conteúdo')
     Requerente = models.CharField(max_length=200)
     CPF = models.IntegerField(default=None)
