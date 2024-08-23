@@ -25,8 +25,4 @@ urlpatterns = [
     path("SEDURB_Autorizacao/", views.SEDURB_Autorizacao),
     path("SEDURB_Atualizacao/", views.SEDURB_Atualizacao),
     path("Autorizacao_Solo_Eventual/", views.Autorizacao_Solo_Eventual),
-    # path("teste/", views.teste),
-    # path("", include("home.urls")),
-    # path("esporte/", include("esporte.urls")),
-    # path("educacao/", include("educacao.urls")),
 ]
