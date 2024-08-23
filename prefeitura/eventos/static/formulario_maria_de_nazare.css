@@ -1,0 +1,62 @@
+h3 {
+    margin: 0;
+    margin-top: 20px;
+}
+
+.servicos-maria{
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+h6 {
+    margin: 0;
+    margin-top: 10px;
+}
+
+.frase {
+    margin-bottom: 40px;
+}
+
+h5 {
+    font-weight: normal; 
+}
+
+.tituto-maria {
+    font-weight: 70; 
+}
+
+h4 {
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: normal; 
+}
+
+input {
+    background-color: #f5f5f5;
+    border: 0;
+    width: 100%;
+    height: 50px;
+    font-family: inherit;
+    padding: 20px;
+    font-size: 15px;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: 0;
+    margin-top: 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+}
+

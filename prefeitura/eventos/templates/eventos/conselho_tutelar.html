@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conselho Tutelar</title>
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link rel="stylesheet" href="{% static 'conselho_tutelar.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        
+        <h5 class="titular">Serviços</h5>
+        
+        <!-- <div class="titular">Serviços</div> {% include 'navbar.html' %} -->
+
+        <!-- https://pictogrammers.com/library/mdi/ -->
+        <div class="icone">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>human</title>
+                <path
+                    d="M21,9H15V22H13V16H11V22H9V9H3V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
+            </svg>
+        </div>
+
+        <h4 class="titulo-categoria">Conselho Tutelar</h4>
+
+        <div class="botao-servicos">Serviços</div>
+
+        <h5 class="titulo-servicos">Serviços disponíveis</h5>
+
+        <div class="servicos">
+            <a class="servico" href="/eventos/conselho_tutelar_cristo">
+                Conselho Tutelar Cristo
+            </a>
+
+            <a class="servico" href="/eventos/conselho_tutelar_mangabeira">
+                Conselho Tutelar Mangabeira
+            </a>
+
+            <a class="servico" href="/eventos/conselho_tutelar_norte">
+                Conselho Tutelar Norte
+            </a>
+
+            <a class="servico" href="/eventos/conselho_tutelar_praia">
+                Conselho Tutelar Praia
+            </a>
+
+            <a class="servico" href="/eventos/conselho_tutelar_sudeste">
+                Conselho Tutelar Sudeste
+            </a>
+
+            <a class="servico" href="/eventos/conselho_tutelar_sul">
+                Conselho Tutelar Sul
+            </a>
+
+            <a class="servico" href="/eventos/conselho_tutelar_valentina">
+                Conselho Tutelar Valentina
+            </a>
+
+            <a class="servico" href="/eventos/conselho_tutelar_denuncia">
+                Consulte Aqui o Conselho Tutelar da Região da Denúncia 
+            </a>
+
+        </div>
+
+        
+    </div>
+</body>
+
+</html>
