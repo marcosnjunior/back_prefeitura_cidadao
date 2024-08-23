@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Família Acolhedora</title>
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link rel="stylesheet" href="{% static 'formulario_familia_acolhedora.css' %}">
+
+</head>
+
+<body>
+    <div class="container">
+        <!--{% include 'navbar.html' with pagina=True %} -->
+
+        <h5 class="cadastramentos">Cadastramentos</h5>
+
+
+        <h4><b>Família Acolhedora</b></h4>
+
+        <h5>O que é o Serviço de Família Acolhedora?</h5>
+
+        <h5>É um serviço voluntário que organiza o
+            acolhimento temporário de crianças e
+            adolescentes, afastados da sua família
+            de origem por meio de medida protetiva,
+            em residências de famílias acolhedoras
+            cadastradas e habilitadas. Os critérios
+            para se tornar Família Acolhedora,
+            são: ter idade igual ou superior a 21 anos;
+            residir em João Pessoa há pelo menos 2 anos;
+            ter a concordância de todos os membros familiares;
+            apresentar comprovante de renda própria;
+            não apresentar antecedentes criminais;
+            não apresentar problemas psiquiátricos e/ou
+            dependências de substâncias psicoativas;
+            não estar inscrito no Cadastro Nacional de
+            Adoção do Juizado da Infância e Juventude
+            e ter perfil para cuidar de crianças e adolescentes,
+            como: espírito solidário, afeto, segurança e compromisso.</h5>
+
+
+            <h5>Como funciona?</h5>
+
+
+            <h5>Cada família acolhedora, poderá acolher em sua residência
+                apenas uma criança ou adolescente por vez, exceto no caso
+                de grupos de irmãos. A permanência pode perdurar de 0 a 18 meses,
+                ou até que a criança ou adolescente retorne à sua família de origem,
+                extensa ou seja encaminhado para adoção.</h5>
+
+            <h5>O Serviço de Família Acolhedora é voluntário por isso não
+                há qualquer tipo de remuneração, No entanto, a Família Acolhedora
+                receberá um auxílio no valor de 01 (um) salário mínimo, por criança
+                ou adolescente, enquanto durar o acolhimento, tal recurso é destinado
+                aos custos e necessidades do (a) acolhido(a).</h5>
+
+
+            <h5>Quais as etapas para o cadastramento?</h5>
+               
+                <h5><ol>Inscrição (Pré Cadastro);</ol></h5>
+                <h5><ol>Visita domiciliar (Avaliação Técnica);</ol></h5>
+                <h5><ol>Capacitação/Curso de formação;</ol></h5>
+                <h5><ol>Cadastramento.</ol></h5>
+                
+            
+            <br>
+            <br>
+            <br>
+        <!--<h3>{% block titulo %}{% endblock %}</h3>-->
+
+        <div class="conteudo">
+            <!--{% block conteudo %}{% endblock %}-->
+        </div>
+
+        
+
+        <form action="/eventos/familia_acolhedora_forms" method="POST">
+            {% csrf_token %}
+
+            <label>
+                <h4>Nome Completo *</h4>
+                <input type="text" name="nome" id="nome" placeholder="Nome Completo" required>
+            </label>
+
+            <label>
+                <h4>Idade *</h4>
+                <input type="number" name="idade" id="idade" placeholder="Idade" required>
+            </label>
+
+            <label>
+                <h4>Data de Nascimento *</h4>
+                <input type="number" name="data_nascimento" id="data_nascimento" placeholder="Data de Nascimento" required>
+            </label>
+
+            <label>
+                <h4>CPF *</h4>
+                <input type="number" name="cpf" id="cpf" placeholder="CPF" required>
+            </label>
+
+            <label>
+                <h4>RG *</h4>
+                <input type="number" name="rg" id="rg" placeholder="RG" required>
+            </label>
+
+            <label>
+                <h4>Endereço Completo *</h4>
+                <input type="text" name="endereco" id="endereco" placeholder="Endereço Completo" required>
+            </label>
+
+            <label>
+                <h4>Número da Residência *</h4>
+                <input type="number" name="numero_residencia" id="numero_residencia" placeholder="Número da Residência" required>
+            </label>
+
+            <label>
+                <h4>CEP *</h4>
+                <input type="number" name="cep" id="cep" placeholder="CEP" required>
+            </label>
+
+            <label>
+                <h4>Ponto de Referência *</h4>
+                <input type="text" name="ponto_referencia" id="ponto_referencia" placeholder="Ponto de Referência" required>
+            </label>
+
+            <label>
+                <h4>Bairro *</h4>
+                <input type="text" name="bairro" id="bairro" placeholder="Bairro" required>
+            </label>
+
+            <label>
+                <h4>Cidade *</h4>
+                <input type="text" name="cidade" id="cidade" placeholder="Cidade" required>
+            </label>
+
+            <label>
+                <h4>UF *</h4>
+                <input type="text" name="uf" id="uf" placeholder="UF" required>
+            </label>
+
+            <label>
+                <h4>Complemento *</h4>
+                <input type="text" name="complemento" id="complemento" placeholder="Complemento" required>
+            </label>
+
+            <label>
+                <h4>Telefone Residencial *</h4>
+                <input type="tel" name="telefone" id="telefone" placeholder="Telefone Residencial" required>
+            </label>
+
+            <label>
+                <h4>Celular *</h4>
+                <input type="tel" name="celular" id="celular" placeholder="Celular" required>
+            </label>
+
+            <label>
+                <h4>E-mail *</h4>
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+            </label>
+
+            <label>
+                <h4>Como ficou sabendo do serviço 'Família Acolhedora?' *</h4>
+                <select name="sabendo_servico" id="sabendo_servico" required>
+                    <option selected disabled volue="">Selecione uma opção</option>
+                    <option>Indicação de outra Família Acolhedora</option>
+                    <option>Jornal</option>
+                    <option>Cartilha/Folder</option>
+                    <option>Portal da Prefeitura</option>
+                    <option>Outros</option>
+                </select>
+            </label>
+
+            <label>
+                <h4>Preferência do Perfil / Idade para acolhimento *</h4>
+                <input class="bem_maior" type="text" name="preferencia_perfil" id="preferencia_perfil" placeholder="Preferência do Perfil / Idade para acolhimento" required>
+            </label>
+
+            <label>
+                <h4>Preferência de Gênero para acolhimento *</h4>
+                <select name="genero_acolhimento" id="genero_acolhimento" required>
+                    <option selected disabled volue="">Selecione uma opção</option>
+                    <option>Feminino</option>
+                    <option>Masculino</option>
+                    <option>Não Tenho Preferência de Gênero para Acolhimento </option>
+                </select>
+            </label>
+
+            <label>
+                <h4>Possui Renda Fixa? *</h4>
+                <select name="renda" id="renda" required>
+                    <option selected disabled volue="">Selecione uma opção</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
+            </label>
+
+            <label>
+                <h4>Caso Possua, qual a Renda Aproximada?</h4>
+                <input type="text" name="renda_aproximada" id="renda_aproximada" placeholder="Caso Possua, qual a Renda Aproximada?" required>
+            </label>
+
+            <label>
+                <h4>É Residente de João Pessoa no mínimo há 2 anos? *</h4>
+                <select name="residente" id="residente" required>
+                    <option selected disabled volue="">Selecione uma opção</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
+            </label>
+
+            <label>
+                <h4>Espaço destinado à família acolhedora para deixar uma mensagem de sua escolha</h4>
+                <input class="bem_maior" type="text" name="mensagem" id="mensagem" placeholder="Espaço destinado à família acolhedora para deixar uma mensagem de sua escolha" required>
+            </label>
+
+            <button type="submit" value="familia_acolhedora_forms">Solicitar</button>
+        </form>
+    </div>
+</body>
+
+</html>

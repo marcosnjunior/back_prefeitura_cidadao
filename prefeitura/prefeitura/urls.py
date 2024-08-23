@@ -29,6 +29,7 @@ urlpatterns = [
     path("licenciamento/", include("licenciamento.urls")),
     path("infraestrutura/", include("infraestrutura.urls")),
     path("educacao/", include("educacao.urls")),
+    path("eventos/", include("eventos.urls")),
     path("meio_ambiente/", include("meio_ambiente.urls")),
     path("zeladoria/", include("zeladoria.urls")),
     path("seguranca/", include("seguranca.urls")),

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "home",
     "esporte",
     "educacao",
+    "eventos",
     "meio_ambiente",
     "zeladoria",
     "animais",
