@@ -58,7 +58,7 @@ class Terraplanagem(models.Model):
     observacoes = models.CharField(max_length=255,null=True,default='',blank=True)
     telefone = models.CharField(max_length=15)
     rua = models.CharField(max_length=100)
-    numeroRecidencia = models.ImageField()
+    numeroRecidencia = models.IntegerField()
     bairro = models.CharField(max_length=100)
     estadoUF = models.CharField(max_length=2, choices=ESTADO_CHOICES)
     cidade = models.CharField(max_length=100)
