@@ -17,19 +17,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("educacao/", include("educacao.urls")),
-    path("animais/", include("animais.urls")),
-    path("saude/", include("saude.urls")),
-    path("", include("home.urls")),
-    path("esporte/", include("esporte.urls")),
-    path("licenciamento/", include("licenciamento.urls")),
-    path("infraestrutura/", include("infraestrutura.urls")),
-    path("educacao/", include("educacao.urls")),
-    path("meio_ambiente/", include("meio_ambiente.urls")),
-    path("zeladoria/", include("zeladoria.urls")),
-    path("seguranca/", include("seguranca.urls")),
-
+    path("IPTU_Isencao_de_Imoveis/", views.IPTU_Isencao_de_Imoveis),
+    path("ISS_Redução_de_Alíquota_ISS/", views.ISS_Redução_de_Alíquota_ISS),
+    path("previdencia/", views.previdencia),
+    path("Viva_O_Centro/", views.Viva_O_Centro),
+    path("iptu/", views.iptu),
 ]

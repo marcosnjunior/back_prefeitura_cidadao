@@ -44,9 +44,9 @@ INSTALLED_APPS = [
     "zeladoria",
     "animais",
     "saude",
+    "licenciamento"
     "infraestrutura"
     "seguranca",
-
 ]
 
 MIDDLEWARE = [
