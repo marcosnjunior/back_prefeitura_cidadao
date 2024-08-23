@@ -313,7 +313,7 @@ class Familia_acolhedora_forms (models.Model):
         return self.nome
     
     class Meta:
-        verbose_name = 'Família Acolhedora'
+        verbose_name = 'Formulario Família Acolhedora'
     
 
 
