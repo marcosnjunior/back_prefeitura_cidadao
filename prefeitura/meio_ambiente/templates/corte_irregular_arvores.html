@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'forms.css' %}">
+    <title>Corte Irregular de Arvores</title>
+</head>
+<body>
+    <div class="corpo">
+        <div class="titulo">
+            <p class="titulo">Serviços</p>
+        </div>
+        <h2>Corte Irregular de Árvores</h2>
+
+        <p>
+            Serviço de Poda Responsável de Árvores: A Secretaria <br>
+            da SEMAM da Prefeitura de João Pessoa está <br>
+            comprometida em combater a poda irregular de árvores. <br>
+            Nossos especialistas fiscalizam e orientam sobre a <br>
+            importância de podar de maneira adequada, preservando <br>
+            a saúde das árvores e a segurança pública. Denuncie <br>
+            práticas irregulares e junte-se a nós na proteção do <br>
+            nosso patrimônio arbóreo. Juntos, promovemos um <br>
+            ambiente mais verde e harmonioso para todos.
+        </p>
+        <form action="" method="post">
+            {{form}}
+            {% csrf_token %}
+            <button type="submit">Solicitar</button>
+        </form>
+    </div>
+</body>
+</html>

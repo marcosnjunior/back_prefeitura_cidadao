@@ -1,0 +1,116 @@
+.titulo{
+    color: black;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.corpo{
+    margin: auto;
+    width: 500px;
+    height: 400px;
+    /* background-color: blueviolet; */
+    
+}
+
+
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+input, textarea{
+    width:99%;
+    height: 40px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    border-width: 0px;
+    margin: 5px;
+    margin-left: 0px;
+
+}
+
+textarea{
+    height: 80px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: 0;
+    margin-top: 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(58, 58, 58);
+}
+
+.foto{
+    width: 500px;
+    height: 350px;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+
+}
+
+
+h4, h3{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+   
+}
+
+.upload{
+    width:99%;
+    height: 80px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    border-width: 0px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    border: 2px  dashed gray;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    
+}
+
+
+
+svg{
+    margin: 20px;
+}
+
+.up{
+    font-family: Helvetica, sans-serif;
+    font-size: larger;
+    margin: 1px;
+    color: rgb(19, 19, 19)
+}
+
+.arquivo{
+    font-family: Helvetica, sans-serif;
+    font-size: large;
+    margin: 1px;
+    color: rgb(122, 122, 122)
+}
+
+
+
+
+

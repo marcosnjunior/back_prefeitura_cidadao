@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'forms.css' %}">
+    <title>lançamentos de Aguas Servidas</title>
+</head>
+<body>
+    <div class="corpo">
+        <div class="titulo">
+            <p class="titulo">Serviços</p>
+        </div>
+        <h2>Lançamentos de Águas Servidas</h2>
+
+        <p>
+            Serviço de Tratamento de Águas Sujas: A secretaria da <br>
+            SEMAM da Prefeitura de João Pessoa cuida para que a <br>
+            água suja, que vem das casas e empresas, seja tratada <br>
+            corretamente antes de ser jogada fora. Isso evita que <br>
+            essa água polua os rios e cause problemas para a saúde <br>
+            das pessoas. Nossos especialistas fiscalizam para <br>
+            garantir que tudo seja feito de maneira certa. Juntos, <br>
+            podemos cuidar melhor do nosso meio ambiente e da <br>
+            saúde de todos.
+        </p>
+        <form action="" method="post">
+            {{form}}
+            {% csrf_token %}
+            <button type="submit">Solicitar</button>
+        </form>
+    </div>
+</body>
+</html>
