@@ -19,15 +19,7 @@ def familia_acolhedora(request):
 def familia_acolhedora_forms(request):
 
     if request.method == "POST":
-        
-        data_nascimneto = request.POST.get('data_nascimento')
-        print(data_nascimneto)
-
-        cpf = request.POST.get('cpf')
-        print(cpf)
-
-
-        """
+      
         nome = request.POST.get('nome')
         idade = request.POST.get('idade')
         data_nascimento = request.POST.get('data_nascimento')
@@ -52,37 +44,40 @@ def familia_acolhedora_forms(request):
         residente = request.POST.get('residente')
         mensagem = request.POST.get('mensagem')
 
-        cadastro_familia = Familia_acolhedora_forms()
-        cadastro_familia.nome = nome
-        cadastro_familia.idade = idade
-        cadastro_familia.data_nascimento = data_nascimento
-        cadastro_familia.cpf = cpf
-        cadastro_familia.rg = rg
-        cadastro_familia.endereco = endereco
-        cadastro_familia.numero_residencia = numero_residencia
-        cadastro_familia.cep = cep
-        cadastro_familia.ponto_referencia = ponto_referencia
-        cadastro_familia.bairro = bairro
-        cadastro_familia.cidade = cidade
-        cadastro_familia.uf = uf
-        cadastro_familia.complemento = complemento
-        cadastro_familia.telefone = telefone
-        cadastro_familia.celular = celular
-        cadastro_familia.email = email
-        cadastro_familia.sabendo_servico = sabendo_servico
-        cadastro_familia.preferencia_perfil = preferencia_perfil
-        cadastro_familia.genero_acolhimento = genero_acolhimento
-        cadastro_familia.renda = renda
-        cadastro_familia.renda_aproximada = renda_aproximada
-        cadastro_familia.residente = residente
-        cadastro_familia.mensagem = mensagem
-        cadastro_familia.save()
-""" 
+        salvar = Familia_acolhedora_forms()
+        salvar.nome = nome
+        salvar.idade = idade
+        salvar.data_nascimento = data_nascimento
+        salvar.cpf = cpf
+        salvar.rg = rg
+        salvar.endereco = endereco
+        salvar.numero_residencia = numero_residencia
+        salvar.cep = cep
+        salvar.ponto_referencia = ponto_referencia
+        salvar.bairro = bairro
+        salvar.cidade = cidade
+        salvar.uf = uf
+        salvar.complemento = complemento
+        salvar.telefone = telefone
+        salvar.celular = celular
+        salvar.email = email
+        salvar.sabendo_servico = sabendo_servico
+        salvar.preferencia_perfil = preferencia_perfil
+        salvar.genero_acolhimento = genero_acolhimento
+        salvar.renda = renda
+        salvar.renda_aproximada = renda_aproximada
+        salvar.residente = residente
+        salvar.mensagem = mensagem
+        salvar.save()
+ 
         return redirect("/eventos/familia_acolhedora")
     
     else:
         return render(request, 'eventos/familia_acolhedora_.html', {})
    
+
+##############################################################################
+
 
 def cultura(request):
     return render(request, 'eventos/cultura.html', {})
@@ -311,60 +306,131 @@ def edital_de_formento(request):
 def conselho_tutelar(request):
     return render(request, 'eventos/conselho_tutelar.html', {})
 
+
 def conselho_tutelar_cristo(request):
-    return render(request, 'eventos/conselho_tutelar_cristo.html', {})
-
-
-"""
-
-if request.method == "POST":
-        descricao_denuncia = request.POST.get('descricao_denuncia')
-        endereco_aconteceu = request.POST.get('endereco_aconteceu')
-        descricao = request.POST.get('descricao')
-        cadastro = Conselho_tutelar_cristo()
-        cadastro = descricao_denuncia
-        cadastro = endereco_aconteceu
-        cadastro = descricao
-        cadastro.save()
-
-        return redirect("/eventos/conselho_tutelar")
-    
-    else:
-        return render(request, 'eventos/conselho_tutelar_cristo.html', {})
-
         
-if request.method == "POST":
+    if request.method == "POST":
         descricao_denuncia = request.POST.get('descricao_denuncia')
         endereco_aconteceu = request.POST.get('endereco_aconteceu')
         descricao = request.POST.get('descricao')
-        Conselho_tutelar_cristo.objects.create(descricao_denuncia=descricao_denuncia)
-        Conselho_tutelar_cristo.objects.create(endereco_aconteceu=endereco_aconteceu)
-        Conselho_tutelar_cristo.objects.create(descricao=descricao)
+        salvar = Conselho_tutelar_cristo()
+        salvar.descricao_denuncia = descricao_denuncia
+        salvar.endereco_aconteceu = endereco_aconteceu
+        salvar.descricao = descricao
+        salvar.save()
 
         return redirect("/eventos/conselho_tutelar")
     
     else:
         return render(request, 'eventos/conselho_tutelar_cristo.html', {})
-"""
 
 
 def conselho_tutelar_mangabeira(request):
-    return render(request, 'eventos/conselho_tutelar_mangabeira.html', {})
+
+    if request.method == "POST":
+        descricao_denuncia = request.POST.get('descricao_denuncia')
+        endereco_aconteceu = request.POST.get('endereco_aconteceu')
+        descricao = request.POST.get('descricao')
+        salvar = Conselho_tutelar_mangabeira()
+        salvar.descricao_denuncia = descricao_denuncia
+        salvar.endereco_aconteceu = endereco_aconteceu
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/conselho_tutelar")
+    
+    else:
+        return render(request, 'eventos/conselho_tutelar_mangabeira.html', {})
+
 
 def conselho_tutelar_norte(request):
-    return render(request, 'eventos/conselho_tutelar_norte.html', {})
+
+    if request.method == "POST":
+        descricao_denuncia = request.POST.get('descricao_denuncia')
+        endereco_aconteceu = request.POST.get('endereco_aconteceu')
+        descricao = request.POST.get('descricao')
+        salvar = Conselho_tutelar_norte()
+        salvar.descricao_denuncia = descricao_denuncia
+        salvar.endereco_aconteceu = endereco_aconteceu
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/conselho_tutelar")
+    
+    else:
+        return render(request, 'eventos/conselho_tutelar_norte.html', {})
+    
 
 def conselho_tutelar_praia(request):
-    return render(request, 'eventos/conselho_tutelar_praia.html', {})
+
+    if request.method == "POST":
+        descricao_denuncia = request.POST.get('descricao_denuncia')
+        endereco_aconteceu = request.POST.get('endereco_aconteceu')
+        descricao = request.POST.get('descricao')
+        salvar = Conselho_tutelar_praia()
+        salvar.descricao_denuncia = descricao_denuncia
+        salvar.endereco_aconteceu = endereco_aconteceu
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/conselho_tutelar")
+    
+    else:
+        return render(request, 'eventos/conselho_tutelar_praia.html', {})
+    
 
 def conselho_tutelar_sudeste(request):
-    return render(request, 'eventos/conselho_tutelar_sudeste.html', {})
+
+    if request.method == "POST":
+        descricao_denuncia = request.POST.get('descricao_denuncia')
+        endereco_aconteceu = request.POST.get('endereco_aconteceu')
+        descricao = request.POST.get('descricao')
+        salvar = Conselho_tutelar_sudeste()
+        salvar.descricao_denuncia = descricao_denuncia
+        salvar.endereco_aconteceu = endereco_aconteceu
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/conselho_tutelar")
+    
+    else:
+        return render(request, 'eventos/conselho_tutelar_sudeste.html', {})
+    
 
 def conselho_tutelar_sul(request):
-    return render(request, 'eventos/conselho_tutelar_sul.html', {})
+
+    if request.method == "POST":
+        descricao_denuncia = request.POST.get('descricao_denuncia')
+        endereco_aconteceu = request.POST.get('endereco_aconteceu')
+        descricao = request.POST.get('descricao')
+        salvar = Conselho_tutelar_sul()
+        salvar.descricao_denuncia = descricao_denuncia
+        salvar.endereco_aconteceu = endereco_aconteceu
+        salvar.descricao = descricao
+        salvar.save()
+
+        return redirect("/eventos/conselho_tutelar")
+    
+    else:
+        return render(request, 'eventos/conselho_tutelar_sul.html', {})
+    
 
 def conselho_tutelar_valentina(request):
-    return render(request, 'eventos/conselho_tutelar_valentina.html', {})
+    
+    if request.method == "POST":
+        descricao = request.POST.get('descricao')
+        endereco_aconteceu = request.POST.get('endereco_aconteceu')
+        salvar = Conselho_tutelar_valentina()
+        salvar.descricao = descricao
+        salvar.endereco_aconteceu = endereco_aconteceu
+        salvar.save()
+
+        return redirect("/eventos/conselho_tutelar")
+    
+    else:
+        return render(request, 'eventos/conselho_tutelar_valentina.html', {})
+    
+
 
 def conselho_tutelar_denuncia(request):
     return render(request, 'eventos/conselho_tutelar_denuncia.html', {})
@@ -395,54 +461,3 @@ def maria_de_nazare(request):
     else:
         return render(request, 'eventos/maria_de_nazare.html', {})
 
-"""
-def furto_extravio_ou_perda_de_equipamentos(request):
-    if request.method == "POST":
-        descricao = request.POST.get('descricao')
-        Furto_Extravio_ou_Perda_de_Equipamentos.objects.create(descricao=descricao)
-        return redirect("/educacao")
-    else:
-        return render(request, 'furto_extravio_ou_perda_de_equipamentos.html')
-
-"""
-
-    
-"""
-
-cadastro.feedback = feedback
-        cadastro.nome = nome
-        cadastro.cpf = cpf
-        cadastro.telefone = telefone
-        cadastro.save()
-
-
-def home(request):
-    return render(request, 'loja/home.html', {})
-
-
-def cadastrar(request):
-
-    if request.method == "POST":
-
-        nome = request.POST.get('nome')
-        preco = request.POST.get('preco')
-        quantidade = request.POST.get('quantidade')
-
-        novo_produto = Produto()
-        novo_produto.nome = nome
-        novo_produto.preco = preco
-        novo_produto.quantidade = quantidade
-        novo_produto.save()
-
-    return render(request, 'loja/cadastrar.html', {})
-
-
-
-def pesquisar(request):
-
-
-    if request.method == "POST":
-        pesquisa = request.POST.get('pesquisa')
-        resultado = Produto.objects.filter(nome__contains=pesquisa) 
-        return render(request,'loja/pesquisa.html',{'nome': 'Thiago', 'resultado':resultado})
-"""
