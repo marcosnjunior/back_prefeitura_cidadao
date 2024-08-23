@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'seguranca/global.css' %}">
+    <link rel="stylesheet" href="{% static 'seguranca/formulario.css' %}">
+</head>
+<body>
+    <div class="container">
+        {% include 'header.html' %}
+        <h3>Denuncie aqui</h3>
+        <p>Denuncie vandalismo em UBS, postos de sáude, praças e casos de violência. Juntos construímos uma cidade mais segura e acolhedora</p>
+        <h6>Informações</h6>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="">Bairro do local da denúncia. *</label>
+            <textarea name="bairro_denuncia" id="bairro_denuncia" class="teatro_and_denuncie" required></textarea>
+            
+            <label for="">Rua do local da denúncia. *</label>
+            <textarea name="rua_denuncia" id="rua_denuncia" class="teatro_and_denuncie" required></textarea>
+
+            <label for="">Ponto de Referencia do local da denúncia. *</label>
+            <textarea name="ponto_referencia" id="ponto_referencia" class="teatro_and_denuncie" required></textarea>
+
+            <label for="">CEP do local da denúncia. *</label>
+            <textarea name="cep_denuncia" id="cep_denuncia" class="teatro_and_denuncie" required></textarea>
+
+            <label for="">Observações *</label>
+            <textarea name="observacoes" id="observacoes" class="teatro_and_denuncie" required></textarea>
+
+            <input type="submit" value="Solicitar" class="botao">
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Previdência</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .previdencia-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .service-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #1e90ff;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .main-button {
+            width: auto; /* Altera o tamanho para ajustar ao conteúdo */
+            margin-bottom: 20px;
+            margin-left: 0; /* Remove a margem automática à esquerda */
+            text-align: left; /* Alinha o texto à esquerda */
+        }
+
+        .services-available h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .grid-container .service-button {
+            font-size: 16px;
+            padding: 20px;
+        }
+        a{
+            text-decoration:none;
+        }
+     
+
+        
+                
+
+          
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="back-button" onclick="goBack()">&#8592;</button>
+            <style>
+                p {
+                   text-align: center;
+                }
+
+
+           </style>
+            </header>
+
+            <h1><p>Serviços</p></h1>
+       
+        
+        <section class="previdencia-section">
+            <div class="icon">
+                <img src="https://img.icons8.com/ios-filled/50/000000/elderly-person.png" alt="Ícone Previdência">
+            </div>
+            <h2>Previdência</h2>
+        </section>
+
+        <button class="service-button main-button">Serviços</button>
+
+        <section class="services-available">
+            <h3>Serviços disponíveis</h3>
+            <div class="grid-container">
+                <a href="https://www.ipmjp.pb.gov.br/site/login">    <button class="service-button">Contra Cheque</button></a>
+                <a href="https://www.ipmjp.pb.gov.br/site/login"> <button class="service-button">Ficha Financeira</button></a>
+               <a href="https://www.ipmjp.pb.gov.br/site/login/comprovantederendimentos"> <button class="service-button">Declaração De Rendimentos</button></a>
+              <a href="https://www.ipmjp.pb.gov.br/site/agendamento/prova_de_vida/7&app=true">  <button class="service-button">Prova De Vida</button></a>
+               <a href="https://www.ipmjp.pb.gov.br/site/requerimento&app=true"> <button class="service-button">Requerimentos</button></a>
+               <a href="https://www.ipmjp.pb.gov.br/site/requerimento/consulta&app=true"> <button class="service-button">Consulta de Processos</button></a>
+               <a href="https://www.ipmjp.pb.gov.br/site/simulador"> <button class="service-button">Simulador de aposentadoria</button></a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
