@@ -1,0 +1,49 @@
+.titulo_categoria {
+    display: flex;
+    justify-content: center;
+}
+.botao_servicos {
+    background-color: rgb(255,81,81);
+    border-radius: 1000px;
+    border: lightgray 1px solid;
+    padding: 10px 15px;
+    display: inline-block;
+    color: white;
+}
+.botao_servicos:hover {
+    background-color: rgba(255, 157, 157, 0.973);
+}
+
+.container_servicos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.caixa_servico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 3px;
+    background-color: rgb(255,81,81);
+    width: 171px;
+    height: 85px;
+    margin: 2px;
+}
+.caixa_servico:hover {
+    background-color: rgba(255, 157, 157, 0.973);
+}
+.servico {
+    display: inline-block;
+    padding: 5px;
+
+    color: white;
+    text-decoration: none;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
