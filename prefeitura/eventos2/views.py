@@ -9,7 +9,6 @@ def procon(request):
 def duvida(request):
   if request.method == "POST":
     nome = request.POST.get('nome')
-    print(nome)
     cpf = request.POST.get('cpf')
     sexo = request.POST.get('sexo')
     cep = request.POST.get('cep')
@@ -27,6 +26,20 @@ def duvida(request):
     
     form_duvida = Duvida()
     form_duvida.nome = nome
+    form_duvida.cpf = cpf
+    form_duvida.sexo = sexo
+    form_duvida.cep = cep
+    form_duvida.rua = rua
+    form_duvida.bairoo = nome
+    form_duvida.cidade = cidade
+    form_duvida.telefone_whatsapp = telefone_whatsapp
+    form_duvida.email = email
+    form_duvida.razao_social = razao_social
+    form_duvida.telefone_fornecedor = telefone_fornecedor
+    form_duvida.nome_fts_fncd = nome_fts_fncd
+    form_duvida.endereco_fornecedor = endereco_fornecedor
+    form_duvida.descricao = descricao
+
     form_duvida.save()
 
     return redirect('procon')
@@ -51,6 +64,20 @@ def reclamacao(request):
     descricao = request.POST.get('descricao')
 
     form_reclamacao = Reclamacao()
+    form_reclamacao.nome = nome
+    form_reclamacao.cpf = cpf
+    form_reclamacao.sexo = sexo
+    form_reclamacao.cep = cep
+    form_reclamacao.rua = rua
+    form_reclamacao.bairoo = nome
+    form_reclamacao.cidade = cidade
+    form_reclamacao.telefone_whatsapp = telefone_whatsapp
+    form_reclamacao.email = email
+    form_reclamacao.razao_social = razao_social
+    form_reclamacao.telefone_fornecedor = telefone_fornecedor
+    form_reclamacao.nome_fts_fncd = nome_fts_fncd
+    form_reclamacao.endereco_fornecedor = endereco_fornecedor
+    form_reclamacao.descricao = descricao
     form_reclamacao.save()
 
     return redirect(request, '/procon')
@@ -76,6 +103,19 @@ def denuncia(request):
     
 
     form_denuncia = Denuncia()
+    form_denuncia.nome = nome
+    form_denuncia.cpf = cpf
+    form_denuncia.sexo = sexo
+    form_denuncia.cep = cep
+    form_denuncia.rua = rua
+    form_denuncia.bairoo = nome
+    form_denuncia.cidade = cidade
+    form_denuncia.telefone_whatsapp = telefone_whatsapp
+    form_denuncia.razao_social = razao_social
+    form_denuncia.telefone_fornecedor = telefone_fornecedor
+    form_denuncia.nome_fts_fncd = nome_fts_fncd
+    form_denuncia.endereco_fornecedor = endereco_fornecedor
+    form_denuncia.descricao = descricao
     form_denuncia.save()
 
     return redirect(request, '/procon')
@@ -104,6 +144,20 @@ def formpaoleite(request):
     concordoTermos = request.POST.get('concordoTermos')
 
     form_paoleite = PaoLeite()
+    form_paoleite.nome = nome
+    form_paoleite. dataNascimento =  dataNascimento
+    form_paoleite.idade = idade
+    form_paoleite.telefone = telefone
+    form_paoleite.cpf = cpf
+    form_paoleite.endereco = endereco
+    form_paoleite.bairro = bairro
+    form_paoleite.carteiraTrabalhoAss  = carteiraTrabalhoAss 
+    form_paoleite.possuiDeficiencia = possuiDeficiencia
+    form_paoleite.estadoCivil = estadoCivil
+    form_paoleite.numeroNis = numeroNis
+    form_paoleite.possuiBolsaFamilia  = possuiBolsaFamilia 
+    form_paoleite.possuiCartaoAlimentacao= possuiCartaoAlimentacao
+    form_paoleite.concordoTermos= concordoTermos
     form_paoleite.save()
 
     return redirect(request, '/paoleite')

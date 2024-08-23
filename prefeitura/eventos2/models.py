@@ -63,7 +63,7 @@ class Denuncia(models.Model):
 #PÂO E LEITE
 class PaoLeite(models.Model):
     nome = models.CharField(max_length=150)
-    dataNascimento =  models.DateField()
+    dataNascimento =  models.CharField(max_length=150)
     idade = models.IntegerField()
     telefone = models.CharField(max_length=20)
     cpf = models.CharField(max_length=14)
