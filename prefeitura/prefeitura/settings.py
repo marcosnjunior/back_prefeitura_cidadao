@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "zeladoria",
     "animais",
     "saude",
+    "eventos2",
     "licenciamento",
     "infraestrutura",
     "seguranca",
