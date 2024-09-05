@@ -159,3 +159,8 @@ def denuncie_aqui(request):
         
         return redirect("/seguranca/guarda-municipal")
     return render(request, "servicos_guarda_municipal/denuncie_aqui.html", {})
+
+
+def admin_seguranca(request):
+    status = Palestras_Para_Instituicoes_De_Ensino.objects.all()
+    return render(request, "admin_seguranca.html", {'status': status})
