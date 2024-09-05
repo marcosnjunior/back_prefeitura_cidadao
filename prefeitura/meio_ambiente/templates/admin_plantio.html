@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    table, th, td{
+        border: 1px solid black;
+
+    }
+</style>
+
+   
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Status</th>
+        
+    </tr>
+   
+    {% for i in plantio %}
+    <tr>
+
+        <td>{{i.nome_rua}}</td>
+        <td>{{i.status}}</td>
+    </tr>
+     {% endfor %}
+    
+    
+</table>
+</body>
+</html>

@@ -12,5 +12,5 @@ urlpatterns = [
     path("corte_irregular_arvores", views.corteIrregularArvores),
     path("poluicao_atmosferica", views.poluicaoAtmosferica),
     path("invasao_area_preservacao_permanente", views.invasaoAreaPreservacaoPermanente),
-    
+    path("admin_plantio", views.admin_plantio_arvores),
 ]
