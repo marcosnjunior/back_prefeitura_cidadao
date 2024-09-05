@@ -2,6 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import SEDRUB_Autorizacao_Uso_Solo_Comercial, Autorizacao_Uso_de_Solo_Eventual, Atualizacao_Cadatral_Dos_Quiosques
 
+def Mostrar_Dados_SEDURB_Autorizacao(request):
+    dados = SEDRUB_Autorizacao_Uso_Solo_Comercial.objects.all()
+    return render(request, 'Mostrar_Dados_SEDURB_AUTORIZACAO.html', {'dados': dados})
+    # Criar um dicionário com a variável e outros dados necessários
+
+
 def Imposto_e_Certidoes(request): # VIEW PARA CARREGAR A PAGINA
     # return HttpResponse('<h1>Hello HttpResponse</h1>')
     return render(request, 'Imposto_e_Certidoes.html', {})
@@ -65,6 +71,8 @@ def SEDURB_Autorizacao(request):
         Formulario_SEDRUB.CPF = request.POST.get('CPF')
         Agua = request.POST.get('Lig_Agua')
         Energia = request.POST.get('Lig_Energ')
+
+        Status = request.POST.get('Status')
         
         if Agua == None: Agua = False
         else: Agua = True
@@ -75,6 +83,7 @@ def SEDURB_Autorizacao(request):
         Formulario_SEDRUB.Ligação_de_Água = Agua
         Formulario_SEDRUB.Ligação_de_Energia = Energia
         Formulario_SEDRUB.Endereco = request.POST.get('Endereco')
+        Formulario_SEDRUB.Status = request.POST.get('Status')
         Formulario_SEDRUB.save()   
     else:
         print('\n Não entrou')
