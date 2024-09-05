@@ -12,6 +12,7 @@ class Denuncia(models.Model):
     horaDaDenuncia = models.TimeField()
     motivoDenuncia = models.TextField()
     cidadeDaDenuncia = models.CharField(max_length=100)
+    status = models.CharField(max_length=19, choices=TIPO_STATUS_CHOICES, default='Em andamento')
 
     def __str__(self):
         return self.tipo
@@ -20,7 +21,6 @@ class Denuncia(models.Model):
         verbose_name = 'Vigilancia Sanitaria - Denúncia'
 
 # Vacina
-
 class Vacinacao_Domiciliar(models.Model):
    telefone = models.CharField(max_length=15)
    cep = models.CharField(max_length=10)

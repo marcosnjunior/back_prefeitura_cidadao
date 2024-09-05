@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 
 from .forms.vigilancia_sanitaria import DenunciaForm
 from .forms.vacina import VacinacaoDomiciliarForm
@@ -6,6 +6,7 @@ from .forms.lgbt_igualdade import ConsultaGinecologistaLGBTForm, ExameCitopatolo
 from .forms.remedio_em_casa import RemedioEmCasaForm, RenovacaoReceitaForm
 from .forms.opera_mais import SoliciteCirurgiaForm, ExamesForm
 from .forms.cartao_sus import CartaoSUSForm
+from .models import Denuncia
 
 # categoria de saúde
 def vigilancia_sanitaria(request):
@@ -25,6 +26,12 @@ def opera_mais(request):
 
 def cartao_sus(request):
     return render(request, 'cartao-sus.html')
+
+
+def vigilancia_sanitaria_admin(request):
+    resultadoTodos = Denuncia.objects.all()
+    print(resultadoTodos)
+    return render(request, 'admin/denuncia.html', {'resultado': resultadoTodos})
 
 
 def denuncias(request):

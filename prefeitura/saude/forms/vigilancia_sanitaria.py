@@ -14,6 +14,7 @@ class DenunciaForm(forms.ModelForm):
             'motivoDenuncia': 'Motivo da Denúncia',
             'cidadeDaDenuncia': 'Cidade da Denúncia',
             'horaDaDenuncia': 'Hora da Denúncia',
+            'status': 'Status',
         }
 
         widgets = {
