@@ -46,3 +46,9 @@ def solicitacao_de_Uso_de_Espaco_Fisico(request):
         return redirect("/esporte")
     else:
         return render(request, 'solicitacao_de_uso_de_espaco_fisico.html')
+    
+def esporte_admin(request):
+    resultado = Recebimento_de_Convite.objects.all()
+
+    return render(request, 'esporte_admin.html', {"resultado": resultado})
+    

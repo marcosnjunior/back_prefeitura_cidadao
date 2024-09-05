@@ -4,6 +4,7 @@ from django.db import models
 
 class Recebimento_de_Convite(models.Model):
     descricao = models.TextField()
+    status = models.CharField(max_length=200, default="aberto")
 
     def __str__(self):
         return self.descricao
@@ -46,5 +47,3 @@ class Solicitacao_de_Uso_de_Espaco_Fisico(models.Model):
     
     class Meta:
         verbose_name = 'SEJER - Solicitacao_de_Uso_de_Espaco_Fisico'
-
-
