@@ -6,7 +6,7 @@ from .forms.lgbt_igualdade import ConsultaGinecologistaLGBTForm, ExameCitopatolo
 from .forms.remedio_em_casa import RemedioEmCasaForm, RenovacaoReceitaForm
 from .forms.opera_mais import SoliciteCirurgiaForm, ExamesForm
 from .forms.cartao_sus import CartaoSUSForm
-from .models import Denuncia
+from .models import *
 
 # categoria de saúde
 def vigilancia_sanitaria(request):
@@ -27,6 +27,34 @@ def opera_mais(request):
 def cartao_sus(request):
     return render(request, 'cartao-sus.html')
 
+
+def admin(request):
+    # pegar todos os models
+    denuncias = Denuncia.objects.all()
+    vacinacao = Vacinacao_Domiciliar.objects.all()
+    consulta_ginecologista = Consulta_Ginecologista_LGBT.objects.all()
+    exame_citopatologico = ExameCitopatologico.objects.all()
+    gastroenterologista = Gastroenterologista.objects.all()
+    exame_endocrinologia = ExameEndocrinologia.objects.all()
+    remedio_em_casa = RemedioEmCasa.objects.all()
+    renovacao_receita = RenovacaoReceita.objects.all()
+    solicite_cirurgia = SoliciteSuaCirugia.objects.all()
+    exames = Exames.objects.all()
+    cartao_sus = CartaoSus.objects.all()
+
+    return render(request, 'admin/admin.html', {
+        'denuncias': denuncias,
+        'vacinacao': vacinacao,
+        'consulta_ginecologista': consulta_ginecologista,
+        'exame_citopatologico': exame_citopatologico,
+        'gastroenterologista': gastroenterologista,
+        'exame_endocrinologia': exame_endocrinologia,
+        'remedio_em_casa': remedio_em_casa,
+        'renovacao_receita': renovacao_receita,
+        'solicite_cirurgia': solicite_cirurgia,
+        'exames': exames,
+        'cartao_sus': cartao_sus,
+    })
 
 def vigilancia_sanitaria_admin(request):
     resultadoTodos = Denuncia.objects.all()

@@ -23,5 +23,6 @@ class VacinacaoDomiciliarForm(forms.ModelForm):
             'numeroCasa': forms.NumberInput(attrs={'min': 0}),
             'telefone': forms.TextInput(attrs={'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
             'dataNascimento': forms.DateInput(attrs={'type': 'date'}),
+            'status': forms.TextInput(attrs={'type': 'hidden'}),
         }
         

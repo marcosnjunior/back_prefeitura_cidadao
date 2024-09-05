@@ -5,6 +5,7 @@ urlpatterns = [
     path("vigilancia-sanitaria", views.vigilancia_sanitaria),
     path("admin/vigilancia-sanitaria", views.vigilancia_sanitaria_admin),
     path("vacina", views.vacina),
+    path("admin", views.admin),
     path("opera-mais", views.opera_mais),
     path("remedio-em-casa", views.remedio_em_casa),
     path("cartao-sus", views.cartao_sus),

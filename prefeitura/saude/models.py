@@ -29,7 +29,8 @@ class Vacinacao_Domiciliar(models.Model):
    numeroCasa = models.IntegerField()
    pontoReferencia = models.CharField(max_length=100)
    dataNascimento = models.DateField()
-   
+   status = models.CharField(max_length=19, choices=TIPO_STATUS_CHOICES, default='Em andamento', blank=True, null=True)
+
    def __str__(self):
        return self.telefone
    
@@ -50,7 +51,8 @@ class RemedioEmCasa(models.Model):
     estadoUF = models.CharField(max_length=2, choices=ESTADO_CHOICES)
     pacienteAcamado = models.CharField(max_length=1, choices=SIM_OU_NAO)
     dataNascimento = models.DateField()
-    
+    status = models.CharField(max_length=19, choices=TIPO_STATUS_CHOICES, default='Em andamento',  blank=True, null=True)
+
     def __str__(self):
         return self.nome
     
@@ -62,6 +64,8 @@ class RenovacaoReceita(models.Model):
     rg = models.CharField(max_length=14)
     endereco = models.CharField(max_length=100)
     pontoReferencia = models.CharField(max_length=100)
+    status = models.CharField(max_length=19, choices=TIPO_STATUS_CHOICES, default='Em andamento',  blank=True, null=True)
+
     def __str__(self):
         return self.cpf
     class Meta:
@@ -74,6 +78,7 @@ class SoliciteSuaCirugia(models.Model):
     sus = models.CharField(max_length=100)
     tipoExame = models.CharField(max_length=2, choices=EXAME_CHOICES)
     informacoesAdicionais = models.TextField()
+    status = models.CharField(max_length=19, choices=TIPO_STATUS_CHOICES, default='Em andamento',  blank=True, null=True)
 
     def __str__(self):
         return self.nome
@@ -87,6 +92,7 @@ class Exames(models.Model):
     tipoExame = models.CharField(max_length=2, choices=EXAME_CHOICES)
     informacoesAdicionais = models.TextField()
     telefone = models.CharField(max_length=15)
+    status = models.CharField(max_length=19, choices=TIPO_STATUS_CHOICES, default='Em andamento',  blank=True, null=True)
 
     def __str__(self):
         return self.nome
@@ -116,6 +122,7 @@ class Consulta_Ginecologista_LGBT(models.Model):
     tenativadeSuicidio = models.CharField(max_length=1, choices=SIM_OU_NAO)
     cpf = models.CharField(max_length=14)
     dataNascimento = models.DateField()
+    status = models.CharField(max_length=19, choices=TIPO_STATUS_CHOICES, default='Em andamento',  blank=True, null=True)
    
     def __str__(self):
            return self.nomeSocial
@@ -140,6 +147,7 @@ class Gastroenterologista(models.Model):
     trabalhoSituacao = models.CharField(max_length=2, choices=SITUACAO_TRABALHANDO_CHOICES, null=True)
     dataNascimento = models.DateField()
     cpf = models.CharField(max_length=14)
+    status = models.CharField(max_length=19, choices=TIPO_STATUS_CHOICES, default='Em andamento',  blank=True, null=True)
   
     def __str__(self):
         return self.nome
@@ -165,6 +173,7 @@ class ExameCitopatologico(models.Model):
     recebeBeneficio = models.CharField(max_length=2, choices=RECEBE_TIPO_BENEFICIO_CHOICES)
     pensamentoSuicida = models.CharField(max_length=1, choices=SIM_OU_NAO)
     tentativaSuicidio = models.CharField(max_length=1, choices=SIM_OU_NAO)
+    status = models.CharField(max_length=19, choices=TIPO_STATUS_CHOICES, default='Em andamento',  blank=True, null=True)
 
     def __str__(self):
         return self.nome
@@ -192,6 +201,7 @@ class ExameEndocrinologia(models.Model):
     pensamentoSuicida = models.CharField(max_length=1, choices=SIM_OU_NAO)
     tentativaSuicidio = models.CharField(max_length=1, choices=SIM_OU_NAO)
     nivelEscolaridade = models.CharField(max_length=2, choices=GRAU_DE_ESCOLARIDADE_CHOICES, null=True)
+    status = models.CharField(max_length=19, choices=TIPO_STATUS_CHOICES, default='Em andamento',  blank=True, null=True)
 
     def __str__(self):
         return self.nome
@@ -205,6 +215,7 @@ class ExameEndocrinologia(models.Model):
 class CartaoSus(models.Model):
     nome = models.CharField(max_length=100)
     cor = models.CharField(max_length=2, choices=COR_CHOICES)
+    status = models.CharField(max_length=19, choices=TIPO_STATUS_CHOICES, default='Em andamento',  blank=True, null=True)
 
     def __str__(self):
         return self.nome
