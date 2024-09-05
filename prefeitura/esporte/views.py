@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Recebimento_de_Convite, Solicitacao_de_Apoio, Solicitacao_de_Material,  Solicitacao_de_Reparos_e_Manutencao_de_Equipamentos, Solicitacao_de_Uso_de_Espaco_Fisico
+from .models import Recebimento_de_Convite, Solicitacao_de_Apoio, Solicitacao_de_Material, Solicitacao_de_Reparos_e_Manutencao_de_Equipamentos, Solicitacao_de_Uso_de_Espaco_Fisico
 
 # Create your views here.
 def esporte(request):

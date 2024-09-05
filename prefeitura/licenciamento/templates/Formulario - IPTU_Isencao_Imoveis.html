@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> IPTU ISENÇÂO IMÓVEIS </title>
+</head>
+<body>
+    <div>
+        <h1> IPTU - Isenção de Imóveis na Zona Prioritária de Centro Histórico </h1>
+        <p><b style="color:red">Documento necessária para requerer benefícios fiscais na Zona Prioritária Centro Histórico</b></p>
+        <b>Identificação Requerente Pessoa Física: </b>
+        
+        <ul><li>Rg e CPF do requerente;</li></ul>
+        
+        <b>Identificação Requerente Pessoa Jurídica:</b>
+
+        <ul>
+            <li> Comprovante de inscrição no CNPJ</li>
+            <li> Comprovante de inscrição no CPF e RG ou equivalente do representante da entidade</li>
+            <li> Ato que nomeou ou designou o representante da entidade (Contrato social ou equivalente)</li>
+
+        </ul>
+        
+        <b>Identificação do Procurador (se houver):</b>
+        <ul>
+            <li>Procuração pública ou particular com firma reconhecida (se houver)</li>
+            <li>RG e CPF do procurador (se houver)</li>
+        </ul>
+
+        <b>Identificação do imóvel:</b>
+
+        <ul>
+            <li>Ficha cadastral do imóvel</li>
+            <li>Certidão de registro do imóvel objeto do pedido, expedida em até 90 (noventa) dias</li>
+        </ul>
+
+        <b>Outros documentos</b>
+    
+        <ul>
+            <li>Comprovante de uso residencial ou não-residencial atualizado, relativo aos últimos 3 (três) meses, tais como: água, energia, telefone fixo, tv a cabo, condomínio, cartão de crédito, etc.
+
+            <li>Comprovação do uso efetivo do imóvel para fins de instalação e/ou manutenção de atividade econômica (CNPJ, alvará de funcionamento e/ou contrato de locação), em caso de imóvel não residencial.
+        </ul>
+        <b>Obs:</b> Com base na legislação tributária, fica dispensada a exigência de prova de quitação de dívidas municipais tributárias e não tributárias, inscritas ou não na dívida ativa da Fazenda Pública Municipal para pleitear, obter e permanecer no gozo de quaisquer incentivos ou benefícios fiscais.
+        
+        <br><br><b>Informações</b><br><br>
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="">Descrição *</label> <br>
+            <textarea name="descricao" id=""></textarea> <br><br>
+            <input type="submit" value="Solicitar" style="background-color:rgb(180, 179, 179); border: None; padding: 10px; color:rgb(255, 255, 255)">
+        </form>
+    </div>
+</body>
+</html>

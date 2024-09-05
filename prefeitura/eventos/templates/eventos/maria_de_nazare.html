@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria de Nazaré</title>
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link rel="stylesheet" href="{% static 'formulario_maria_de_nazare.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        
+        <h5 class="servicos-maria">Serviços</h5>
+       
+        <h4 class="tituto-maria">Maria de Nazaré</h4>
+
+        <h5>Esse canal tem como objetivo permitir que os
+            beneficiários tenham acesso e comunicação direta
+            com a Prefeitura de João Pessoa, a fim de facilitar
+            a resolução de dúvidas e reclamações, assim como
+            recebimento de sugestões e elogios.</h5>
+
+        <h5 class="frase">Escreva abaixo sua dúvida, reclamação, sugestão e elogios.</h5>
+
+        <form action="/eventos/maria_de_nazare" method="POST">
+            {% csrf_token %}
+
+            <label>
+                <h4>Escreva aqui a sua dúvida, reclamação, elogio ou sugestão. *</h4>
+                <input type="text" name="feedback" id="feedback" placeholder="Escreva aqui a sua dúvida, reclamação, elogio ou sugestão." required>
+            </label>
+
+            <label>
+                <h4>Nome Completo *</h4>
+                <input type="text" name="nome" id="nome" placeholder="Nome Completo" required>
+            </label>
+
+
+            <label>
+                <h4>CPF *</h4>
+                <input type="number" name="cpf" id="cpf" placeholder="CPF" required>
+            </label>
+
+
+            <label>
+                <h4>Inserir Telefone/Whatsapp *</h4>
+                <input type="tel" name="telefone" id="telefone" placeholder="Inserir Telefone/Whatsapp" required>
+            </label>
+
+
+            <button type="submit" value="maria_de_nazare">Solicitar</button>
+        </form>
+    </div>
+</body>
+
+</html>
