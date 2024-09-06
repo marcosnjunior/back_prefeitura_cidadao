@@ -26,6 +26,7 @@ class ConsultaGinecologistaLGBTForm(forms.ModelForm):
 
         widgets = {
             'dataNascimento': forms.DateInput(attrs={'type': 'date'}),
+            'status': forms.TextInput(attrs={'type': 'hidden'}),
         }
 
 
@@ -57,6 +58,7 @@ class ExameCitopatologicoForm(forms.ModelForm):
             'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
             'telefone': forms.TextInput(attrs={'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
             'dataNascimento': forms.DateInput(attrs={'type': 'date'}),
+            'status': forms.TextInput(attrs={'type': 'hidden'}),
         }
 
 class GastroenterologistaForm(forms.ModelForm):
@@ -89,6 +91,7 @@ class GastroenterologistaForm(forms.ModelForm):
             'dataNascimento': forms.DateInput(attrs={'type': 'date'}),
             'cidade': forms.TextInput(attrs={'placeholder': 'Cidade'}),
             'email': forms.EmailInput(attrs={'placeholder': 'E-mail'}),
+            'status': forms.TextInput(attrs={'type': 'hidden'}),
         }
 
 
@@ -127,4 +130,5 @@ class ExameEndocrinologiaForm(forms.ModelForm):
             'dataNascimento': forms.DateInput(attrs={'type': 'date'}),
             'cidade': forms.TextInput(attrs={'placeholder': 'Cidade'}),
             'email': forms.EmailInput(attrs={'placeholder': 'E-mail'}),
+            'status': forms.TextInput(attrs={'type': 'hidden'}),
         }

@@ -38,4 +38,5 @@ class ExamesForm(forms.ModelForm):
             'rg': forms.TextInput(attrs={'placeholder': '00.000.000-0'}),
             'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
             'telefone': forms.TextInput(attrs={'placeholder': '(__) _____-____', 'type': 'tel', 'maxlength': 15}),
+            'status': forms.TextInput(attrs={'type': 'hidden'}),
         }
