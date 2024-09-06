@@ -24,6 +24,7 @@
     padding: 10px 15px;
     display: inline-block;
     color: white;
+    text-decoration: none;
 }
 
 .servicos {
@@ -43,7 +44,29 @@
     height: 85px;
 }
 
-.botao-servicos:hover, .servico:hover {
+a.botao-servicos:hover, .servico:hover {
     opacity: 0.3;
     cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 50px;
+}
+
+table th,
+table td {
+    padding: 10px 5px;
+}
+
+table th {
+    background-color: #eee;
+    text-align: left;
+}
+
+table thead tr:first-child th {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
 }

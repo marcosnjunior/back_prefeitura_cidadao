@@ -145,3 +145,10 @@ ESTADO_CHOICES = [
     ('SE', 'Sergipe'),
     ('TO', 'Tocantins'),
 ]
+
+TIPO_STATUS_CHOICES = [
+    ('Aberto', 'Aberto'),
+    ('Cancelado', 'Cancelado'),
+    ('Fechado', 'Fechado'),
+    ('Em andamento', 'Em andamento'),
+]

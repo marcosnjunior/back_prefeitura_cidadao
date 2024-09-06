@@ -8,4 +8,6 @@ urlpatterns = [
     path("furto_extravio_ou_perda_de_equipamentos", views.furto_extravio_ou_perda_de_equipamentos),
     path("solicitacao_de_espaco_fisico_escola_crei", views.solicitacao_de_espaco_fisico_escola_crei),
     path("solicitacao_diversa", views.solicitacao_diversa),
+    path("admin", views.admin),
+    path("educacao_admin", views.admin),
 ]

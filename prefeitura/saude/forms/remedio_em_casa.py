@@ -30,6 +30,8 @@ class RemedioEmCasaForm(forms.ModelForm):
             'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
             'bairro': forms.TextInput(attrs={'placeholder': 'Bairro'}),
             'cidade': forms.TextInput(attrs={'placeholder': 'Cidade'}),
+            'status': forms.TextInput(attrs={'type': 'hidden'}),
+
         }
 
 class RenovacaoReceitaForm(forms.ModelForm):
@@ -49,4 +51,5 @@ class RenovacaoReceitaForm(forms.ModelForm):
             'rg': forms.TextInput(attrs={'placeholder': '00.000.000-0'}),
             'endereco': forms.TextInput(attrs={'placeholder': 'Rua, número, bairro'}),
             'pontoReferencia': forms.TextInput(attrs={'placeholder': 'Ponto de referência'}),
+            'status': forms.TextInput(attrs={'type': 'hidden'}),
         }

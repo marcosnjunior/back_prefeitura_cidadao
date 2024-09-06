@@ -14,6 +14,7 @@ class DenunciaForm(forms.ModelForm):
             'motivoDenuncia': 'Motivo da Denúncia',
             'cidadeDaDenuncia': 'Cidade da Denúncia',
             'horaDaDenuncia': 'Hora da Denúncia',
+            'status': 'Status',
         }
 
         widgets = {
@@ -25,5 +26,6 @@ class DenunciaForm(forms.ModelForm):
             'horarioFuncionamento': forms.TextInput(attrs={'type': 'time', 'placeholder': '00:00'}),
             'horaDaDenuncia': forms.TextInput(attrs={'type': 'time', 'placeholder': '00:00'}),
             'pontoReferencia': forms.TextInput(attrs={'placeholder': 'Ponto de Referência'}),
+            'status': forms.TextInput(attrs={'type': 'hidden'}),
         }
   

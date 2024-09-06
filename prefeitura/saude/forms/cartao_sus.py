@@ -8,5 +8,10 @@ class CartaoSUSForm(forms.ModelForm):
         labels = {
             'nome': 'Nome Completo',
             'cor': 'Qual é a sua raça/cor?',
+            'status': 'Status',
+
         }
 
+        widgets = {
+            'status': forms.TextInput(attrs={'type': 'hidden'}),
+        }

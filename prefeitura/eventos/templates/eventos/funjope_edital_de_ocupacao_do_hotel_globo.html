@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNJOPE - Edital de Ocupação do Hotel Globo</title>
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link rel="stylesheet" href="{% static 'formulario_cultura.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        
+        <h5 class="servicos-conselho">Serviços</h5>
+       
+        <h4 class="tituto-conselho">FUNJOPE - Edital de Ocupação do Hotel Globo</h4>
+
+        <h5 class="frase"></h5>
+
+        <form action="/eventos/funjope_edital_de_ocupacao_do_hotel_globo" method="POST">
+            {% csrf_token %}
+
+            <h6>Informações</h6>
+
+            <label>
+                <h4>Descrição *</h4>
+                <textarea name="descricao" placeholder="Conteúdo" required></textarea>
+            </label>
+
+
+            <button type="submit" value="funjope_edital_de_ocupacao_do_hotel_globo">Solicitar</button>
+        </form>
+    </div>
+</body>
+
+</html>
