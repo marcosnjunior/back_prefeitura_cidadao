@@ -44,3 +44,17 @@ def solicitacao_diversa(request):
         return redirect("/educacao")
     else:
         return render(request, 'solicitacao_diversa.html')
+
+def admin(request):
+    estagios = Autorizacao_de_Estagio_Supervisionado.objects.all()
+    pesquisas = Autorizacao_para_Pesquisa_CREI_Escola.objects.all()
+    perdas = Furto_Extravio_ou_Perda_de_Equipamentos.objects.all()
+    espacos = Solicitacao_de_Espaco_Fisico_Escola_CREI.objects.all()
+    diversas = Solicitacao_Diversa.objects.all()
+    return render(request, 'admin.html', {
+        'estagios': estagios,
+        'pesquisas': pesquisas,
+        'perdas': perdas,
+        'espacos': espacos,
+        'diversas': diversas,
+    })
