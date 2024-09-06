@@ -6,7 +6,8 @@ from django.db import models
 
 # Defesa Civil
 class Palestras_Para_Instituicoes_De_Ensino(models.Model):
-    descricao = models.TextField(max_length=2000);  
+    descricao = models.TextField(max_length=2000)
+    status = models.CharField(max_length=30, default="ABERTO")
     def __str__(self):
         return self.descricao
 

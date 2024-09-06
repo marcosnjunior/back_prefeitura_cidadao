@@ -18,4 +18,5 @@ urlpatterns = [
     path("teatro-de-fantoches", views.teatro_de_fantoches, name="teatro_de_fantoches"),
     path("ouvidoria", views.ouvidoria, name="ouvidoria"),
     path("denuncie-aqui", views.denuncie_aqui, name="denuncie_aqui"),
+    path("admin-seguranca", views.admin_seguranca, name="admin_seguranca")
 ]
