@@ -104,3 +104,9 @@ def invasaoAreaPreservacaoPermanente(request):
     else:
         form = invasao_area_preservacao_permanenteForm()
     return render(request, 'invasao_area_preservacao_permanente.html', {'form': form})
+
+
+def admin_plantio_arvores(request):
+
+    plantio = Plantio_de_Arvores.objects.all()
+    return render(request, 'admin_plantio.html', {'plantio' : plantio})

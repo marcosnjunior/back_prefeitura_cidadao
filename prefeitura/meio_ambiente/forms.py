@@ -5,7 +5,7 @@ from .models import Plantio_de_Arvores, Poda_de_Arvores, lancamento_de_agua_serv
 class Plantio_de_ArvoreForm(forms.ModelForm):
     class Meta:
         model = Plantio_de_Arvores
-        fields ='__all__'
+        fields = '__all__' 
         labels = {
             'larg_compr_calcada' : 'Largura X Comprimento da Calçada *',
             'observacoes' : 'Observações',

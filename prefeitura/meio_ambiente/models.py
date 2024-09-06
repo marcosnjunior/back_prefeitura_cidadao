@@ -9,6 +9,7 @@ class Plantio_de_Arvores(models.Model):
     bairro = models.CharField(max_length=100)
     nome_rua = models.CharField(max_length=100)
     ponto_refer = models.CharField(max_length=100)
+    status = models.CharField(max_length=100, default="")
 
     def __str__(self):
         return self.bairro
