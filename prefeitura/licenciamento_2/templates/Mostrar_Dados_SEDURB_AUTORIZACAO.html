@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Dados Da Autorização do SEDURB</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        {% for dado in dados %}
+    
+            <tr>
+                <th>Nome</th>
+                <td>{{ dado.Requerente }}</td>
+                <th>Status</th> 
+                <td>{{ dado.Status }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

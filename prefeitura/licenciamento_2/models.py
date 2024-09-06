@@ -7,6 +7,7 @@ class SEDRUB_Autorizacao_Uso_Solo_Comercial(models.Model): # ATUALIZACAO
     Ligação_de_Água = models.BooleanField(default=False)
     Ligação_de_Energia = models.BooleanField(default=False)
     Endereco = models.CharField(max_length=500)
+    Status = models.CharField(max_length=12, default="Em Andamento") # ABERTO, FECHADO EM ANDAMENTO
 
     def __str__(self):
         return self.Requerente

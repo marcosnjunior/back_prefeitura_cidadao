@@ -25,4 +25,5 @@ urlpatterns = [
     path("SEDURB_Autorizacao/", views.SEDURB_Autorizacao),
     path("SEDURB_Atualizacao/", views.SEDURB_Atualizacao),
     path("Atualizacao_Quiosque/", views.Atualizacao_Quiosque),
+    path("mostrar_dados_sedurb_autorizacao/", views.Mostrar_Dados_SEDURB_Autorizacao),
 ]
