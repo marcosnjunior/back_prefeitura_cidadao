@@ -11,5 +11,5 @@ urlpatterns = [
    path('cras', views.cras, name='cras'),
    path('textocras', views.textocras, name='textocras'),
    path('formpaoleite', views.formpaoleite, name='formpaoleite'),
-   
+   path('admin_eventos2', views.admin_eventos2, name='admin_eventos2'),
 ]

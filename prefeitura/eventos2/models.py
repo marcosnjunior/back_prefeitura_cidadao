@@ -45,7 +45,7 @@ class Denuncia(models.Model):
     nome = models.CharField(max_length=150)
     cpf = models.CharField(max_length=14)
     telefone_whatsapp = models.CharField(max_length=20)
-    sexo = models.CharField(max_length=3)
+    sexo = models.CharField(max_length=10)
     cep = models.CharField(max_length=10)
     rua = models.CharField(max_length=50)
     bairro = models.CharField(max_length=15)
@@ -55,6 +55,7 @@ class Denuncia(models.Model):
     nome_fornecedor = models.CharField(max_length=150)
     endereco_fornecedor = models.CharField(max_length=200)
     cnpj = models.CharField(max_length=20)
+    status = models.CharField(max_length=12, default="em andamento")
 
     def __str__(self):
         return self.descricao

@@ -101,6 +101,7 @@ def denuncia(request):
     nome_fornecedor = request.POST.get('nome_fornecedor')
     endereco_fornecedor = request.POST.get('endereco_fornecedor')
     cnpj = request.POST.get('cnpj')
+    status = request.POST.get('status')
     
 
     form_denuncia = Denuncia()
@@ -118,6 +119,7 @@ def denuncia(request):
     form_denuncia.nome_fornecedor = nome_fornecedor
     form_denuncia.endereco_fornecedor = endereco_fornecedor
     form_denuncia.cnpj = cnpj
+    
     form_denuncia.save()
     
 
@@ -173,4 +175,7 @@ def cras(request):
 
 def textocras(request):
   return render(request, 'eventos2/texto-cras.html', {})
+
+def admin_eventos2(request):
+  return render(request, 'eventos2/admin_eventos2.html', {})
 #Create your views here.
