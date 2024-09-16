@@ -1,5 +1,5 @@
 .icone {
-    background-color: #30cde2;
+    background-color: var(--cor-azul-claro);
     padding: 10px;
     width: 20px;
     height: 20px;
@@ -18,7 +18,7 @@
 }
 
 .botao-servicos {
-    background-color: #30cde2;
+    background-color: var(--cor-azul-claro);
     border-radius: 1000px;
     border: lightgray 1px solid;
     padding: 10px 15px;
@@ -35,7 +35,7 @@
 .servico {
     display: flex;
     align-items: center;
-    background-color: #30cde2;
+    background-color: var(--cor-azul-claro);
     color: white;
     text-decoration: none;
     padding: 5px;
