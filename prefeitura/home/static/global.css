@@ -2,6 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .container {
     max-width: 360px;
     margin: auto;
@@ -10,11 +11,19 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    padding: 10px 40px;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    margin: auto;
+    max-width: 360px;
+    margin-bottom: 20px;
 }
 
 .navbar .titulo {
     text-align: center;
     flex: 1;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
 }

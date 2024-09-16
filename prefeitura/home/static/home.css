@@ -1,7 +1,7 @@
 .categoria .itens {
     display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .categoria .nome-categoria {
@@ -21,7 +21,7 @@
 .item .icone {
     background-color: #ffa929;
     padding: 18px;
-    height: 20px;
+    height: 40px;
     border-radius: 3px;
 }
 
@@ -34,7 +34,8 @@
 .item .nome {
     font-size: 12px;
     margin-top: 8px;
-    color: black;
+    color: azure;
+    font-weight: bold;
 }
 
 .categoria.laranja .item .icone {
