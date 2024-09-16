@@ -4,6 +4,10 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
+.categoria.grid-1 .itens {
+    grid-template-columns: repeat(1, 1fr);
+}
+
 .categoria .nome-categoria {
     margin: 12px 0;
 }
